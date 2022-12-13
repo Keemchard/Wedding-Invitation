@@ -8,9 +8,14 @@ interface Prop {
 const TimeLine: FC<Prop> = ({ timeline }) => {
   return (
     <>
-      <div className="bg-[tertiary] w-[600px] p-[10px]">
+      <div className="bg-[tertiary] max-w-[600px] relative">
+        <div className="line bg-[black] h-[100%] w-[0.3rem] absolute left-0 right-0 ml-auto mr-auto z-10"></div>
         {timeline.map((item) => {
-          return <Event key={item.id} timeline={item} />;
+          return (
+            <div key={item.id}>
+              <Event timeline={item} />
+            </div>
+          );
         })}
       </div>
     </>
