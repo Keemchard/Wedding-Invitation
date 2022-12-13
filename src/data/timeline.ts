@@ -1,6 +1,6 @@
-import { timeline } from "../types/types";
+import { Timeline } from "../types/types";
 
-const timelineData: timeline[] = [
+const timelineData: Timeline[] = [
   {
     time: "07:00 - 08:00",
     title: "couple entry",

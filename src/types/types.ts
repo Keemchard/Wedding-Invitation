@@ -5,7 +5,7 @@ export type ButtonType = {
   btnFunction: () => unknown | void;
 };
 
-export type timeline = {
+export type Timeline = {
   time: string;
   title: string;
   description: string;
