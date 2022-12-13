@@ -10,7 +10,7 @@ const TimeLine: FC<Prop> = ({ timeline }) => {
     <>
       <div className="bg-[tertiary] w-[600px] p-[10px]">
         {timeline.map((item) => {
-          return <Event timeline={item} />;
+          return <Event key={item.id} timeline={item} />;
         })}
       </div>
     </>
