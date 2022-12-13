@@ -16,7 +16,9 @@ const Section3 = () => {
 const TimeLine = () => {
   return (
     <>
-      <div></div>
+      <div>
+        <div className="line"></div>
+      </div>
     </>
   );
 };

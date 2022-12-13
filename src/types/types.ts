@@ -6,7 +6,9 @@ export type ButtonType = {
 };
 
 export type Timeline = {
+  id?: number;
   time: string;
   title: string;
   description: string;
+  box_position?: string;
 };
