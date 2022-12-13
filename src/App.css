@@ -1,0 +1,4 @@
+.timeline-con:hover .timeline-circle {
+  background-color: red;
+  transition: 0.25s;
+}
