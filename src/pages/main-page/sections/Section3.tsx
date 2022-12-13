@@ -1,25 +1,20 @@
 import React from "react";
+import timelineData from "../../../data/timeline";
+
+import TimeLine from "./components/TimeLine";
 
 const Section3 = () => {
+  const timeline = timelineData;
   return (
-    <div className="bg-[brown] my-[20px] rounded flex flex-col justify-center items-center">
+    // delete mb-[1000px] below
+    <div className="bg-[brown] my-[20px] rounded flex flex-col justify-center items-center mb-[1000px]">
       <div className="text-[1.5rem] border-[1px] py-[10px] px-[1rem] my-[20px]">
         Date and Time
       </div>
       <div className="bg-[salmon]">
-        <TimeLine />
+        <TimeLine timeline={timeline} />
       </div>
     </div>
-  );
-};
-
-const TimeLine = () => {
-  return (
-    <>
-      <div>
-        <div className="line"></div>
-      </div>
-    </>
   );
 };
 
