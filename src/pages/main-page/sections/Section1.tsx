@@ -14,7 +14,7 @@ const Section1 = () => {
         alt="wedding bg"
         className="absolute top-0 h-full w-full"
       />
-      <div className="bg-[brown] bg-opacity-40 z-20 p-[30px] w-[600px] h-[300px] rounded flex flex-col justify-center items-center">
+      <div className="bg-primary bg-opacity-40 z-20 p-[30px] w-[600px] h-[300px] rounded flex flex-col justify-center items-center">
         <div className="pb-[30px] text-center">
           <p className="text-[40px]">MR. & MRS. SURNAME</p>
           <p className="text-[35px]">WEDDING</p>
