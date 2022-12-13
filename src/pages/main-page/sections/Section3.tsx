@@ -7,12 +7,17 @@ const Section3 = () => {
         Date and Time
       </div>
       <div className="bg-[salmon]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        assumenda similique, pariatur, placeat iure unde quasi provident laborum
-        possimus magnam sit consectetur architecto, tempore quis eius minima
-        doloremque! Quo, quidem?
+        <TimeLine />
       </div>
     </div>
+  );
+};
+
+const TimeLine = () => {
+  return (
+    <>
+      <div></div>
+    </>
   );
 };
 
