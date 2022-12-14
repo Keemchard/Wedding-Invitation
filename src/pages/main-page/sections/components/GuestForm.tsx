@@ -3,9 +3,9 @@ import InputField from "../../../../components/InputField";
 
 const GuestForm = () => {
   return (
-    <form>
-      <div>
-        <InputField placeholder="its changes noowww" />
+    <form className="p-[1rem]">
+      <div className="flex gap-10">
+        <InputField />
         <InputField />
       </div>
     </form>

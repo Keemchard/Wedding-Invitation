@@ -1,7 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
-const DeclineModal = () => {
-  return <div>DeclineModal</div>;
+interface Prop {
+  message: string;
+}
+
+const DeclineModal: FC<Prop> = ({ message }) => {
+  return <div>{message}</div>;
 };
 
 export default DeclineModal;

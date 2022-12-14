@@ -19,7 +19,7 @@ const InputField: FC<Partial<InputType>> = ({
         color: inputTextColor,
         backgroundColor: inputBgColor,
       }}
-      className="p-[1rem]"
+      className="p-[1rem] rounded"
       placeholder="change this"
       {...props}
     />
