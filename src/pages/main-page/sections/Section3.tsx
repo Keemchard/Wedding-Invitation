@@ -6,8 +6,7 @@ import TimeLine from "./components/TimeLine";
 const Section3 = () => {
   const timeline = timelineData;
   return (
-    // delete mb-[1000px] below
-    <div className="bg-[brown] my-[20px] rounded flex flex-col justify-center items-center mb-[1000px]">
+    <div className="bg-[brown] my-[20px] rounded flex flex-col justify-center items-center">
       <div className="text-[1.5rem] border-[1px] py-[10px] px-[1rem] my-[20px]">
         Date and Time
       </div>
