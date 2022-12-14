@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../../components/Button";
+import GuestForm from "./components/GuestForm";
 
 const Section5 = () => {
   const decline = () => {
@@ -19,7 +20,9 @@ const Section5 = () => {
           <Button label="Decline" btnFunction={decline} />
           <Button label="Accept" btnFunction={accept} />
         </div>
-        <div className="bg-[aqua]"></div>
+        <div className="bg-[aqua]">
+          <GuestForm />
+        </div>
       </div>
     </div>
   );
