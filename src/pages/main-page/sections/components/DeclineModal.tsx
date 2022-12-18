@@ -5,7 +5,7 @@ interface Prop {
 }
 
 const DeclineModal: FC<Prop> = ({ message }) => {
-  return <div>{message}</div>;
+  return <div className="bg-[red] flex justify-center">{message}</div>;
 };
 
 export default DeclineModal;
