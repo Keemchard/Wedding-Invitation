@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer";
 import Section1 from "./sections/Section1";
 import Section2 from "./sections/Section2";
 import Section3 from "./sections/Section3";
@@ -18,6 +19,7 @@ const MainPage = () => {
           <Section4 />
           <Section5 />
         </div>
+        <Footer />
       </div>
     </>
   );
