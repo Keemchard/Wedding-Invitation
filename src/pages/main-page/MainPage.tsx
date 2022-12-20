@@ -9,11 +9,11 @@ import Section5 from "./sections/Section5";
 const MainPage = () => {
   return (
     <>
-      <div className="main w-full bg-[salmon]">
+      <div className="main w-full bg-[#CCB494]">
         <div>
           <Section1 />
         </div>
-        <div className="bg-[gray] w-[75%] m-auto p-[20px]">
+        <div className="bg-[#gray] w-[75%] m-auto p-[20px]">
           <Section2 />
           <Section3 />
           <Section4 />

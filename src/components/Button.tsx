@@ -10,7 +10,7 @@ const Button: FC<ButtonType> = ({
   return (
     <button
       style={{ backgroundColor: bgColor, color: txtColor }}
-      className="py-[15px] px-[35px] rounded"
+      className="py-[15px] px-[35px] rounded hover:scale-[1.1] transition-[0.25s]"
       onClick={btnFunction}
     >
       {label}

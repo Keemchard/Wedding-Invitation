@@ -2,7 +2,7 @@ import CoupleImage from "../../../assets/mock/sec-2-mock.jpg";
 
 const Section2 = () => {
   return (
-    <div className="flex bg-[aqua]">
+    <div className="flex bg-[aqua] my-16">
       <div>
         <img src={CoupleImage} alt="couple img" className="w-[40rem]" />
       </div>

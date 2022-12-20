@@ -7,16 +7,16 @@ const Section4 = () => {
   };
   return (
     <div className="bg-tertiary p-[1rem] flex justify-center my-[5rem]">
-      <div className="bg-[white] p-[1rem] flex gap-3">
-        <div>
+      <div className="bg-[#795644] p-[1rem] flex gap-3">
+        <div className="text-white">
           <p className="font-bold">Join our Livestream</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
         <Button
           label="Join Now"
           btnFunction={goToLivestream}
-          bgColor="brown"
-          txtColor="white"
+          bgColor="#CCB494"
+          txtColor="black"
         />
       </div>
     </div>
