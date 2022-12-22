@@ -6,6 +6,9 @@ import { db } from "../../../../firebase/firebase-config";
 const GuestForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  //TODO: create loading state
+  //create loading and error FC
+  //fix type (remove "any")
 
   const addGuest = async (e: any) => {
     e.preventDefault();
@@ -15,6 +18,9 @@ const GuestForm = () => {
         last_name: lastName,
       });
       console.log("Document written with ID: ", docRef.id);
+      alert(`Thanks ${firstName}`);
+      setFirstName("");
+      setLastName("");
     } catch (e) {
       console.error("Error adding document: ", e);
     }

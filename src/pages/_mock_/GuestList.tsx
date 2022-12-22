@@ -19,6 +19,7 @@ const GuestList = () => {
     getGuestList();
   }, []);
 
+  //TODO: create conditional render for empty and not empty guests
   return (
     <div>
       {guest.map((x: any) => {
