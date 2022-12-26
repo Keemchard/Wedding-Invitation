@@ -16,6 +16,8 @@ const GuestForm = () => {
       const docRef = await addDoc(collection(db, "guest"), {
         first_name: firstName,
         last_name: lastName,
+        //add time and date fields
+        //add comments/wishes/msg fields (optional)
       });
       console.log("Document written with ID: ", docRef.id);
       alert(`Thanks ${firstName}`);
