@@ -12,3 +12,10 @@ export type Timeline = {
   description: string;
   box_position?: string;
 };
+
+export type Guest = {
+  first_name?: string;
+  last_name?: string;
+  date?: string;
+  time?: string;
+};

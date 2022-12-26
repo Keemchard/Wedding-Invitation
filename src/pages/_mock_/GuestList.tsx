@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebase-config";
+import { Guest } from "../../types/types";
 
 const GuestList = () => {
-  const [guest, getGuest] = useState<any>([{}]);
+  const [guest, getGuest] = useState<Guest[]>([{}]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  //TODO: make types (remove any)
   const getGuestList = async () => {
     try {
       setLoading(true);
       const querySnapshot = await getDocs(collection(db, "guest"));
-      const guestData = querySnapshot.docs.map((item: any) => {
+      const guestData = querySnapshot.docs.map((item) => {
         return item.data();
       });
       getGuest(guestData);
       //TODO: remove clg
       console.log(guest);
       setLoading(false);
-    } catch (e: any) {
+    } catch (e) {
       setLoading(false);
-      setError(e);
+      setError(`Error: ${e}`);
     }
   };
 
@@ -42,11 +42,11 @@ const GuestList = () => {
       {guest.length === 0 ? (
         <div>No Guest Yet</div>
       ) : (
-        guest.map((x: any) => {
+        guest.map((guest: Guest) => {
           return (
             <div key={Math.random()}>
-              <div>FIRST NAME: {x.first_name}</div>
-              <div>LAST NAME: {x.last_name}</div>
+              <div>FIRST NAME: {guest.first_name}</div>
+              <div>LAST NAME: {guest.last_name}</div>
             </div>
           );
         })
