@@ -7,6 +7,7 @@ const GuestList = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  //TODO: make types (remove any)
   const getGuestList = async () => {
     try {
       setLoading(true);

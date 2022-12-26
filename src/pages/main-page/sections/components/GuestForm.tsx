@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import InputField from "../../../../components/InputField";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../../firebase/firebase-config";
@@ -8,13 +8,10 @@ const GuestForm = () => {
   const [lastName, setLastName] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  //TODO: create loading state
-  //create loading and error FC
-  //fix type (remove "any")
 
-  const addGuest = async (e: any) => {
+  const addGuest = async (e: FormEvent) => {
     e.preventDefault();
-    if (firstName === "" || lastName === "") {
+    if (firstName.trim() === "" || lastName.trim() === "") {
       alert("fields cannot be empty");
       return;
     }
@@ -34,7 +31,6 @@ const GuestForm = () => {
       setLoading(false);
     } catch (e) {
       setLoading(false);
-      // console.error("Error adding document: ", e);
       setError(`Error adding document: ${e}`);
     }
   };
@@ -55,7 +51,7 @@ const GuestForm = () => {
           placeholder="Your Awesome First Name"
           inputBgColor="#CCB494"
           value={firstName}
-          onChange={(e: any) => {
+          onChange={(e) => {
             setFirstName(e.target.value);
           }}
         />
@@ -64,7 +60,7 @@ const GuestForm = () => {
           placeholder="Your Cool Last Name"
           inputBgColor="#CCB494"
           value={lastName}
-          onChange={(e: any) => {
+          onChange={(e) => {
             setLastName(e.target.value);
           }}
         />
