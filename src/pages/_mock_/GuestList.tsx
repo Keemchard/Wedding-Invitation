@@ -4,7 +4,7 @@ import { db } from "../../firebase/firebase-config";
 
 const GuestList = () => {
   const [guest, getGuest] = useState<any>([{}]);
-  const [error, setError] = useState();
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const getGuestList = async () => {
