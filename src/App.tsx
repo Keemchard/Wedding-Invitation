@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/main-page/MainPage";
 import { motion, useScroll } from "framer-motion";
 import GuestList from "./pages/_mock_/GuestList";
+import AdminAuthPage from "./pages/auth-page/AdminAuthPage";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/guest_list" element={<GuestList />} />
+          <Route path="/admin_auth" element={<AdminAuthPage />} />
         </Routes>
       </BrowserRouter>
     </>
