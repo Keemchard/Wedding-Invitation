@@ -21,6 +21,8 @@ const GuestForm = () => {
         first_name: firstName.trim(),
         last_name: lastName.trim(),
         //add time and date fields
+        date: "test date",
+        time: "test time",
         //add comments/wishes/msg fields (optional)
       });
       //remove clg
