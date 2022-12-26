@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from "react";
 import InputField from "../../../../components/InputField";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../../firebase/firebase-config";
+import { DAY_IN_NUMBER, MONTH, TIME, YEAR } from "../../../../utils/data_time";
 
 const GuestForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -20,9 +21,8 @@ const GuestForm = () => {
       const docRef = await addDoc(collection(db, "guest"), {
         first_name: firstName.trim(),
         last_name: lastName.trim(),
-        //add time and date fields
-        date: "test date",
-        time: "test time",
+        date: `${MONTH}/${DAY_IN_NUMBER}/${YEAR}`,
+        time: TIME,
         //add comments/wishes/msg fields (optional)
       });
       //remove clg

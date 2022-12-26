@@ -47,6 +47,8 @@ const GuestList = () => {
             <div key={Math.random()}>
               <div>FIRST NAME: {guest.first_name}</div>
               <div>LAST NAME: {guest.last_name}</div>
+              <div>DATE: {guest.date}</div>
+              <div>TIME: {guest.time}</div>
             </div>
           );
         })
