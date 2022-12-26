@@ -13,3 +13,11 @@
   transform-origin: 0%;
   z-index: 2;
 }
+
+.guest-table tr,
+th,
+td {
+  border: 1px solid white;
+  padding: 1rem;
+  color: white;
+}

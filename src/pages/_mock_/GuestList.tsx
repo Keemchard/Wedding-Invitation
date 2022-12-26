@@ -38,22 +38,36 @@ const GuestList = () => {
   }
 
   return (
-    <div>
-      {guest.length === 0 ? (
-        <div>No Guest Yet</div>
-      ) : (
-        guest.map((guest: Guest) => {
-          return (
-            <div key={Math.random()}>
-              <div>FIRST NAME: {guest.first_name}</div>
-              <div>LAST NAME: {guest.last_name}</div>
-              <div>DATE: {guest.date}</div>
-              <div>TIME: {guest.time}</div>
-            </div>
-          );
-        })
-      )}
-    </div>
+    <>
+      <div>GUEST #: {guest.length}</div>
+
+      <div className="bg-[salmon] p-7 flex flex-col items-center">
+        {guest.length === 0 ? (
+          <div className="bg-[gray]">No Guest Yet</div>
+        ) : (
+          <table className="guest-table bg-[gray] w-[80%]">
+            <tbody>
+              <tr>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>DATE</th>
+                <th>TIME</th>
+              </tr>
+              {guest.map((guest: Guest) => {
+                return (
+                  <tr key={Math.random()}>
+                    <td>{guest.first_name}</td>
+                    <td>{guest.last_name}</td>
+                    <td>{guest.date}</td>
+                    <td>{guest.time}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
+      </div>
+    </>
   );
 };
 
