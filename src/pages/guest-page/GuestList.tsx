@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { auth, db } from "../../firebase/firebase-config";
 import { Guest } from "../../types/types";
 import Button from "../../components/Button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const GuestList = () => {
   const [guest, getGuest] = useState<Guest[]>([{}]);
@@ -50,50 +50,60 @@ const GuestList = () => {
     return <div>{error}</div>;
   }
 
-  if (!user) {
-    setTimeout(() => {
-      navigate("/admin_auth");
-    }, 5000);
-    return (
-      <div>
-        Please login as an admin to see Guest List, navigating to login page....
-        please wait
-      </div>
-    );
-  }
-
   return (
     <>
-      <div>GUEST #: {guest.length}</div>
+      {!user && (
+        <div>
+          <div>
+            <div>Please login as an admin to see Guest List</div>
+            <Link to="/admin_auth">
+              <Button label="Login" />
+            </Link>
+          </div>
+          <div>
+            <div>or back to home page</div>
+            <Link to="/">
+              <Button label="Home Page" />
+            </Link>
+          </div>
+        </div>
+      )}
 
-      <Button label="signout" btnFunction={sign_out} />
+      {user && (
+        <>
+          <div className="bg-[aqua]">
+            <div>GUEST #: {guest.length}</div>
+            <Button label="signout" btnFunction={sign_out} />
+          </div>
 
-      <div className="bg-[salmon] p-7 flex flex-col items-center">
-        {guest.length === 0 ? (
-          <div className="bg-[gray]">No Guest Yet</div>
-        ) : (
-          <table className="guest-table bg-[gray] w-[80%]">
-            <tbody>
-              <tr>
-                <th>FIRST NAME</th>
-                <th>LAST NAME</th>
-                <th>DATE</th>
-                <th>TIME</th>
-              </tr>
-              {guest.map((guest: Guest) => {
-                return (
-                  <tr key={Math.random()}>
-                    <td>{guest.first_name}</td>
-                    <td>{guest.last_name}</td>
-                    <td>{guest.date}</td>
-                    <td>{guest.time}</td>
+          <div className="bg-[salmon] p-7 flex flex-col items-center">
+            {guest.length === 0 ? (
+              <div className="bg-[gray]">No Guest Yet</div>
+            ) : (
+              <table className="guest-table bg-[gray] w-[80%]">
+                <tbody>
+                  <tr>
+                    <th>FIRST NAME</th>
+                    <th>LAST NAME</th>
+                    <th>DATE</th>
+                    <th>TIME</th>
                   </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        )}
-      </div>
+                  {guest.map((guest: Guest) => {
+                    return (
+                      <tr key={Math.random()}>
+                        <td>{guest.first_name}</td>
+                        <td>{guest.last_name}</td>
+                        <td>{guest.date}</td>
+                        <td>{guest.time}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            )}
+          </div>
+        </>
+      )}
     </>
   );
 };
