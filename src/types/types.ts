@@ -2,7 +2,10 @@ export type ButtonType = {
   label: string;
   bgColor?: string;
   txtColor?: string;
-  btnFunction: () => unknown | void;
+  btnRadius?: string;
+  width?: string;
+  height?: string;
+  btnFunction?: () => unknown | void;
 };
 
 export type Timeline = {

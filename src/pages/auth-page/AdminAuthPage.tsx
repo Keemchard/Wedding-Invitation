@@ -7,8 +7,6 @@ import AdminForm from "./components/AdminForm";
 const email = process.env.REACT_APP_ADMIN_EMAIL as string;
 const AdminAuthPage = () => {
   const [password, setPassword] = useState("");
-
-  //TODO: add/apply loading and error state
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -17,6 +15,8 @@ const AdminAuthPage = () => {
   //https://firebase.google.com/docs/auth/web/manage-users
   //https://firebase.google.com/docs/auth/web/password-auth
   //https://firebase.google.com/docs/reference/js/v8/firebase.User
+
+  //TODO add password validation
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     alert("delete this");

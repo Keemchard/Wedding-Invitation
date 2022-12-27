@@ -7,6 +7,7 @@ import { motion, useScroll } from "framer-motion";
 import GuestList from "./pages/guest-page/GuestList";
 import AdminAuthPage from "./pages/auth-page/AdminAuthPage";
 
+//TODO: create route for invalid link/url
 function App() {
   const { scrollYProgress } = useScroll();
   return (

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 import Section1 from "./sections/Section1";
 import Section2 from "./sections/Section2";
@@ -9,7 +11,7 @@ import Section5 from "./sections/Section5";
 const MainPage = () => {
   return (
     <>
-      <div className="main w-full bg-[#CCB494]">
+      <div className="main relative w-full bg-[#CCB494]">
         <div>
           <Section1 />
         </div>
@@ -20,6 +22,17 @@ const MainPage = () => {
           <Section5 />
         </div>
         <Footer />
+
+        <div className="fixed bottom-5 right-5">
+          <Link to="guest_list">
+            <Button
+              label="Go to Admin" //TODO: add admin logo instead of text
+              bgColor="gray"
+              txtColor="white"
+              btnRadius="0.5rem" //TODO: make it circle 50%
+            />
+          </Link>
+        </div>
       </div>
     </>
   );
