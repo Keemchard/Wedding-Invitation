@@ -1,28 +1,44 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { collection, getDocs } from "firebase/firestore";
-import React, { FormEvent, useEffect, useState } from "react";
-import { auth, db } from "../../firebase/firebase-config";
+import React, { FormEvent, useState } from "react";
+import { auth } from "../../firebase/firebase-config";
 import AdminForm from "./components/AdminForm";
 
-//TODO: MAKE IT TRUE AUTH (NOT GET REQUEST)
+//TODO: MAKE IT TRUE AUTH (NOT GET REQUEST)\
+const email = process.env.REACT_APP_ADMIN_EMAIL as string;
 const AdminAuthPage = () => {
   const [password, setPassword] = useState("");
-  const email = process.env.REACT_APP_ADMIN_EMAIL as string;
 
+  //TODO: add/apply loading and error state
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  //TODO apply onAuthStateChanged
+  //Links: https://firebase.google.com/docs/auth/web/start#web-version-9_3
+  //https://firebase.google.com/docs/auth/web/manage-users
+  //https://firebase.google.com/docs/auth/web/password-auth
+  //https://firebase.google.com/docs/reference/js/v8/firebase.User
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     alert("delete this");
     try {
-      const authenticate = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      console.log(authenticate);
+      setLoading(true);
+      await signInWithEmailAndPassword(auth, email, password);
+      alert("login success!");
+      setLoading(false);
     } catch (e) {
+      setLoading(false);
+      //remove clg
       console.log(`Error: ${e}`);
+      setError(`INVALID PASSWORD! ${e}`);
+      setTimeout(() => {
+        setError("");
+      }, 5000);
     }
   };
+
+  if (loading) {
+    return <div>loading......</div>;
+  }
 
   return (
     <div>
@@ -31,6 +47,7 @@ const AdminAuthPage = () => {
         setPassword={setPassword}
         onSubmit={onSubmit}
       />
+      {error && <div className="text-[red]">{error}</div>}
     </div>
   );
 };
