@@ -6,6 +6,7 @@ import MainPage from "./pages/main-page/MainPage";
 import { motion, useScroll } from "framer-motion";
 import GuestList from "./pages/guest-page/GuestList";
 import AdminAuthPage from "./pages/auth-page/AdminAuthPage";
+import PageNotFound from "./pages/_page-not-found/PageNotFound";
 
 //TODO: create route for invalid link/url
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/guest_list" element={<GuestList />} />
           <Route path="/admin_auth" element={<AdminAuthPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </>
