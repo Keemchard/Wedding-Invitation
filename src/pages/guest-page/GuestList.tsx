@@ -53,18 +53,22 @@ const GuestList = () => {
   return (
     <>
       {!user && (
-        <div>
-          <div>
-            <div>Please login as an admin to see Guest List</div>
-            <Link to="/admin_auth">
-              <Button label="Login" />
-            </Link>
-          </div>
-          <div>
-            <div>or back to home page</div>
-            <Link to="/">
-              <Button label="Home Page" />
-            </Link>
+        <div className="h-[100vh] flex justify-center items-center">
+          <div className="w-[320px] flex flex-col gap-5 text-center">
+            <div>
+              <div className="mb-2">
+                Please login as an admin to see Guest List
+              </div>
+              <Link to="/admin_auth">
+                <Button label="LOGIN" width="100%" bgColor="lightGray" />
+              </Link>
+            </div>
+            <div>
+              <div className="mb-2">or back to home page</div>
+              <Link to="/">
+                <Button label="HOME PAGE" width="100%" bgColor="lightGray" />
+              </Link>
+            </div>
           </div>
         </div>
       )}
@@ -72,8 +76,8 @@ const GuestList = () => {
       {user && (
         <>
           <div className="bg-[aqua]">
-            <div>GUEST #: {guest.length}</div>
-            <Button label="signout" btnFunction={sign_out} />
+            <div>GUEST COUNT: {guest.length}</div>
+            <Button label="SIGN OUT" btnFunction={sign_out} />
           </div>
 
           <div className="bg-[salmon] p-7 flex flex-col items-center">
