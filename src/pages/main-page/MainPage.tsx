@@ -24,7 +24,7 @@ const MainPage = () => {
         <Footer />
 
         <div className="fixed bottom-5 right-5">
-          <Link to="guest_list">
+          <Link to="/admin_auth">
             <Button
               label="Go to Admin" //TODO: add admin logo instead of text
               bgColor="gray"
