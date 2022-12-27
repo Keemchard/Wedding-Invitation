@@ -43,13 +43,14 @@ const AdminAuthPage = () => {
   }
 
   return (
-    <div>
+    <div className="w-full h-[100vh] flex flex-col justify-center items-center">
       <AdminForm
         password={password}
         setPassword={setPassword}
         onSubmit={onSubmit}
       />
       {error && <div className="text-[red]">{error}</div>}
+      {/* {loading && <div>loading....</div>} */}
     </div>
   );
 };
