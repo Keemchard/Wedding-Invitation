@@ -21,7 +21,7 @@ const GuestForm = () => {
       const docRef = await addDoc(collection(db, "guest"), {
         first_name: firstName.trim(),
         last_name: lastName.trim(),
-        date: `${MONTH}/${DAY_IN_NUMBER}/${YEAR}`,
+        date: `${MONTH} ${DAY_IN_NUMBER}, ${YEAR}`,
         time: TIME,
         //add comments/wishes/msg fields (optional)
       });
