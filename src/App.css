@@ -1,5 +1,6 @@
 .timeline-con:hover .timeline-circle {
-  background-color: #c38452;
+  /* mikado yellow */
+  background-color: #ffc301;
   transition: 0.25s;
 }
 
@@ -20,4 +21,54 @@ td {
   border: 1px solid white;
   padding: 1rem;
   color: white;
+}
+
+@media only screen and (max-width: 1050px) {
+  .section-con {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .sec-2 {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .couple-img-con {
+    display: flex;
+    justify-content: center;
+  }
+  .couple-img {
+    width: 80%;
+    margin: 1rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sec-5-field {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .section-con {
+    padding: 10px;
+  }
+  .sec-3-event {
+    margin: 10px 0;
+  }
+  .sec-3-event > div {
+    padding: 0 20px;
+  }
+  .sec-4-con {
+    padding: 0;
+  }
+  .guest-form-main-con {
+    padding: 0;
+  }
+  .guest-form-con {
+    padding: 0;
+    width: 100%;
+  }
+  .sec-5-form {
+    padding: 0;
+  }
 }

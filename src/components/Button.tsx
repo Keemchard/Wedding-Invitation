@@ -4,8 +4,8 @@ import { ButtonType } from "../types/types";
 const Button: FC<ButtonType> = ({
   label,
   btnFunction,
-  bgColor = "gray",
-  txtColor = "black",
+  bgColor,
+  txtColor,
   btnRadius,
   width,
   height,
@@ -19,7 +19,7 @@ const Button: FC<ButtonType> = ({
         width: width,
         height: height,
       }}
-      className="py-[15px] px-[35px] rounded hover:scale-[1.1] transition-[0.25s]"
+      className="bg-wd_mikado_yellow text-black py-[15px] px-[35px] rounded hover:scale-[1.1] transition-[0.25s]"
       onClick={btnFunction}
     >
       {label}

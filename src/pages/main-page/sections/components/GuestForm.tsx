@@ -46,12 +46,12 @@ const GuestForm = () => {
   }
 
   return (
-    <form className="p-[1rem]" onSubmit={addGuest}>
-      <div className="flex gap-10">
+    <form className="sec-5-form p-[1rem]" onSubmit={addGuest}>
+      <div className="sec-5-field flex gap-10">
         <InputField
           type="text"
           placeholder="Your Awesome First Name"
-          inputBgColor="#CCB494"
+          inputBgColor="white"
           value={firstName}
           onChange={(e) => {
             setFirstName(e.target.value);
@@ -60,7 +60,7 @@ const GuestForm = () => {
         <InputField
           type="text"
           placeholder="Your Cool Last Name"
-          inputBgColor="#CCB494"
+          inputBgColor="white"
           value={lastName}
           onChange={(e) => {
             setLastName(e.target.value);
@@ -73,7 +73,8 @@ const GuestForm = () => {
           value={`submit`.toUpperCase()}
           inputWidth="100%"
           inputWeight="bold"
-          inputBgColor="#CCB494"
+          inputBgColor="#7F5946"
+          inputTextColor="white"
         />
       </div>
     </form>

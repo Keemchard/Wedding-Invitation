@@ -11,11 +11,11 @@ import Section5 from "./sections/Section5";
 const MainPage = () => {
   return (
     <>
-      <div className="main relative w-full bg-[#CCB494]">
+      <div className="main relative w-full bg-white">
         <div>
           <Section1 />
         </div>
-        <div className="bg-[#gray] w-[75%] m-auto p-[20px]">
+        <div className="section-con w-[75%] m-auto p-[20px]">
           <Section2 />
           <Section3 />
           <Section4 />
@@ -27,8 +27,8 @@ const MainPage = () => {
           <Link to="/admin_auth">
             <Button
               label="Go to Admin" //TODO: add admin logo instead of text
-              bgColor="gray"
-              txtColor="white"
+              // bgColor="gray"
+              // txtColor="white"
               btnRadius="0.5rem" //TODO: make it circle 50%
             />
           </Link>
