@@ -6,6 +6,7 @@ export type ButtonType = {
   width?: string;
   height?: string;
   btnFunction?: () => unknown | void;
+  icon?: string;
 };
 
 export type Timeline = {

@@ -6,11 +6,11 @@ import TimeLine from "./components/TimeLine";
 const Section3 = () => {
   const timeline = timelineData;
   return (
-    <div className="bg-[brown] my-[20px] rounded flex flex-col justify-center items-center">
-      <div className="text-[1.5rem] border-b-4 border-b-wd_mikado_yellow rounded pt-[10px] px-[1rem] my-[20px] font-bold">
+    <div className="my-[20px] rounded flex flex-col justify-center items-center">
+      <div className="text-[1.5rem] border-b-4 border-b-wd_mikado_yellow rounded pt-[10px] px-[1rem] my-[1.5rem] font-bold">
         Date and Time
       </div>
-      <div className="bg-[salmon]">
+      <div className="">
         <TimeLine timeline={timeline} />
       </div>
     </div>

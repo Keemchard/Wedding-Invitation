@@ -21,29 +21,30 @@ const Section5 = () => {
   };
 
   return (
-    <div className="guest-form-main-con bg-primary flex justify-center items-center p-[10px]">
-      <div className="guest-form-con bg-[salmon] p-[20px]">
+    <div className="guest-form-main-con flex justify-center items-center p-[10px]">
+      <div className="guest-form-con p-[20px]">
         <div>
           <p className="text-[2rem] font-bold text-center">
             Will You Attend This Event?
           </p>
         </div>
-        <div className="bg-[aqua] flex justify-center gap-10 my-[2.5rem]">
+        <div className="flex justify-center gap-10 my-[2.5rem]">
           <Button
-            label="Decline"
+            label="❌ Decline"
             btnFunction={decline}
+            // icon="uil uil-times-circle"
             // bgColor="#6B3E2E"
             // txtColor="white"
           />
           <Button
-            label="Accept"
+            label="✅ Accept"
             btnFunction={accept}
             // bgColor="#6B3E2E"
             // txtColor="white"
           />
         </div>
         {accepted && (
-          <div className="bg-[aqua]">
+          <div>
             <GuestForm />
           </div>
         )}
