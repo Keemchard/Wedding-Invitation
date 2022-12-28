@@ -26,10 +26,13 @@ const MainPage = () => {
         <div className="fixed bottom-5 right-5">
           <Link to="/admin_auth">
             <Button
-              label="Go to Admin" //TODO: add admin logo instead of text
+              label="" //TODO: add admin logo instead of text
+              icon="uil uil-user-square"
               // bgColor="gray"
               // txtColor="white"
-              btnRadius="0.5rem" //TODO: make it circle 50%
+              width="50px"
+              height="60px"
+              btnRadius="0.8rem" //TODO: make it circle 50%
             />
           </Link>
         </div>

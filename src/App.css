@@ -23,11 +23,13 @@ td {
   color: white;
 }
 
-/* .icon-class {
+.icon-class {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
-} */
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 40px;
+}
 
 @media only screen and (max-width: 1050px) {
   .section-con {
