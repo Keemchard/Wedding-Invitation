@@ -1,4 +1,6 @@
 import React, { FC, FormEvent } from "react";
+import { Link } from "react-router-dom";
+import Button from "../../../components/Button";
 import InputField from "../../../components/InputField";
 
 interface Prop {
@@ -21,7 +23,27 @@ const AdminForm: FC<Prop> = ({ password, setPassword, onSubmit }) => {
             setPassword(e.target.value);
           }}
         />
-        <InputField type="submit" value="LOGIN" inputWeight="bold" />
+        <InputField
+          type="submit"
+          value="LOGIN"
+          inputWeight="bold"
+          inputBgColor="#7F5946"
+          inputTextColor="white"
+        />
+      </div>
+      <div className="mt-[0.5rem] w-[100%]">
+        <div>
+          Not a user?{" "}
+          <Link
+            to="/"
+            className="text-wd_coffee hover:text-wd_mikado_yellow font-bold underline"
+          >
+            Back To Home Page
+          </Link>
+        </div>
+        {/* <Link to="/">
+          <Button label="Back To Home Page" width="100%" />
+        </Link> */}
       </div>
     </form>
   );
