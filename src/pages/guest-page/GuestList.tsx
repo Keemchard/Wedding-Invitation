@@ -9,7 +9,9 @@ const GuestList = () => {
   const [guest, getGuest] = useState<Guest[]>([{}]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
+
   const user = auth.currentUser;
 
   const getGuestList = async () => {
@@ -31,6 +33,8 @@ const GuestList = () => {
     try {
       setLoading(true);
       await auth.signOut();
+      alert("Thanks!");
+      navigate("/");
       setLoading(false);
     } catch (e) {
       setLoading(false);
