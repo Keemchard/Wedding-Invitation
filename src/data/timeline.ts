@@ -34,5 +34,6 @@ const timelineData: Timeline[] = [
     box_position: "left",
   },
 ];
+//NOTE: change the timeline line height whenever theres an additional event here above
 
 export default timelineData;
