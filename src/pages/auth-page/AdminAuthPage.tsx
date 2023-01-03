@@ -2,6 +2,7 @@ import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import React, { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebase-config";
+import { toast_notif } from "../../utils/toast";
 import AdminForm from "./components/AdminForm";
 
 const email = process.env.REACT_APP_ADMIN_EMAIL as string;
@@ -17,7 +18,7 @@ const AdminAuthPage = () => {
     try {
       setLoading(true);
       await signInWithEmailAndPassword(auth, email, password);
-      alert("login success!");
+      toast_notif({ message: "Login Success!", theme_color: "light" });
       //check if user is already login
       onAuthStateChanged(auth, (user) => {
         if (user) {
