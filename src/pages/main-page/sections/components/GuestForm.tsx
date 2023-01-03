@@ -3,6 +3,7 @@ import InputField from "../../../../components/InputField";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../../firebase/firebase-config";
 import { DAY_IN_NUMBER, MONTH, TIME, YEAR } from "../../../../utils/data_time";
+import { toast_notif } from "../../../../utils/toast";
 
 const GuestForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -27,7 +28,10 @@ const GuestForm = () => {
       });
       //remove clg
       console.log("Document written with ID: ", docRef.id);
-      alert(`Thanks ${firstName}`);
+      toast_notif({
+        message: `Thanks ${firstName}! for accepting our wedding invitation 🥰`,
+        theme_color: "light",
+      });
       setFirstName("");
       setLastName("");
       setLoading(false);

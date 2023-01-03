@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import Button from "../../../components/Button";
-import { decline_toast } from "../../../utils/toast";
+import { toast_notif } from "../../../utils/toast";
 
-// import DeclineModal from "./components/DeclineModal";
 import GuestForm from "./components/GuestForm";
 
 const Section5 = () => {
   const [accepted, setAccepted] = useState(false);
-  // const [declined, setDeclined] = useState(false);
 
   const decline = () => {
-    // setDeclined(true);
     setAccepted(false);
-    decline_toast();
+    toast_notif({
+      message: "Ow Why?, anyways Thanks!",
+      theme_color: "dark",
+    });
   };
   const accept = () => {
     setAccepted(true);
     toast.dismiss();
-    // setDeclined(false);
   };
 
   return (
