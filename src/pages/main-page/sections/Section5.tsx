@@ -1,23 +1,24 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import Button from "../../../components/Button";
-import DeclineModal from "./components/DeclineModal";
+import { decline_toast } from "../../../utils/toast";
+
+// import DeclineModal from "./components/DeclineModal";
 import GuestForm from "./components/GuestForm";
 
 const Section5 = () => {
   const [accepted, setAccepted] = useState(false);
-  const [declined, setDeclined] = useState(false);
+  // const [declined, setDeclined] = useState(false);
 
   const decline = () => {
-    setDeclined(true);
+    // setDeclined(true);
     setAccepted(false);
-    //TODO: make much better time out for this
-    // setTimeout(() => {
-    //   setDeclined(false);
-    // }, 3000);
+    decline_toast();
   };
   const accept = () => {
     setAccepted(true);
-    setDeclined(false);
+    toast.dismiss();
+    // setDeclined(false);
   };
 
   return (
@@ -48,7 +49,7 @@ const Section5 = () => {
             <GuestForm />
           </div>
         )}
-        {declined && <DeclineModal message="OKS, Thank you for visiting" />}
+        {/* {declined && <DeclineModal message="OKS, Thank you for visiting" />} */}
       </div>
     </div>
   );

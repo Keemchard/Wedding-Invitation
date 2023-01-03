@@ -7,6 +7,8 @@ import { motion, useScroll } from "framer-motion";
 import GuestList from "./pages/guest-page/GuestList";
 import AdminAuthPage from "./pages/auth-page/AdminAuthPage";
 import PageNotFound from "./pages/_page-not-found/PageNotFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //TODO: create route for invalid link/url
 function App() {
@@ -24,6 +26,7 @@ function App() {
           <Route path="/admin_auth" element={<AdminAuthPage />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </>
   );
