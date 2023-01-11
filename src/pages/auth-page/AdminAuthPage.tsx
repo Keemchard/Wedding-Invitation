@@ -18,7 +18,11 @@ const AdminAuthPage = () => {
     try {
       setLoading(true);
       await signInWithEmailAndPassword(auth, email, password);
-      toast_notif({ message: "Login Success!", theme_color: "light" });
+      toast_notif({
+        message: "Login Success!",
+        theme_color: "dark",
+        hideProgressBar: true,
+      });
       //check if user is already login
       onAuthStateChanged(auth, (user) => {
         if (user) {
