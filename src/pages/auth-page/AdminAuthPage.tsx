@@ -1,6 +1,7 @@
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import React, { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../components/Loading";
 import { auth } from "../../firebase/firebase-config";
 import { toast_notif } from "../../utils/toast";
 import AdminForm from "./components/AdminForm";
@@ -44,9 +45,9 @@ const AdminAuthPage = () => {
     }
   };
 
-  if (loading) {
-    return <div>loading......</div>;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
 
   return (
     <div className="w-full h-[100vh] flex flex-col justify-center items-center">
@@ -56,7 +57,11 @@ const AdminAuthPage = () => {
         onSubmit={onSubmit}
       />
       {error && <div className="text-[red]">{error}</div>}
-      {/* {loading && <div>loading....</div>} */}
+      {loading && (
+        <div className="mt-3">
+          <Loading solo={false} />
+        </div>
+      )}
     </div>
   );
 };

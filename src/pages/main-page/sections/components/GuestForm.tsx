@@ -4,6 +4,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../../firebase/firebase-config";
 import { DAY_IN_NUMBER, MONTH, TIME, YEAR } from "../../../../utils/data_time";
 import { toast_notif } from "../../../../utils/toast";
+import Loading from "../../../../components/Loading";
 
 const GuestForm = () => {
   const [firstName, setFirstName] = useState("");
@@ -42,7 +43,7 @@ const GuestForm = () => {
   };
 
   if (loading) {
-    return <div>loading...</div>;
+    return <Loading solo={false} />;
   }
 
   if (error) {

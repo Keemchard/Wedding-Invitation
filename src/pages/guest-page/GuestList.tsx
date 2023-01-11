@@ -5,6 +5,7 @@ import { Guest } from "../../types/types";
 import Button from "../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { toast_notif } from "../../utils/toast";
+import Loading from "react-loading";
 
 const GuestList = () => {
   const [guest, getGuest] = useState<Guest[]>([{}]);
@@ -52,7 +53,7 @@ const GuestList = () => {
   }, []);
 
   if (loading) {
-    return <div>loading...</div>;
+    return <Loading />;
   }
 
   if (error) {
