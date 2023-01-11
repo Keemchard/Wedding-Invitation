@@ -22,6 +22,7 @@ const AdminAuthPage = () => {
         message: "Login Success!",
         theme_color: "dark",
         hideProgressBar: true,
+        autoClose: 3000,
       });
       //check if user is already login
       onAuthStateChanged(auth, (user) => {

@@ -4,6 +4,7 @@ import { auth, db } from "../../firebase/firebase-config";
 import { Guest } from "../../types/types";
 import Button from "../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
+import { toast_notif } from "../../utils/toast";
 
 const GuestList = () => {
   const [guest, getGuest] = useState<Guest[]>([{}]);
@@ -33,7 +34,11 @@ const GuestList = () => {
     try {
       setLoading(true);
       await auth.signOut();
-      alert("Thanks!");
+      toast_notif({
+        message: "Thank you!",
+        theme_color: "dark",
+        autoClose: 3000,
+      });
       navigate("/");
       setLoading(false);
     } catch (e) {
