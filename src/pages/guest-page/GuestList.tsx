@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast_notif } from "../../utils/toast";
 import Loading from "react-loading";
 import Header from "./components/Header";
+import GuestTable from "./components/GuestTable";
 
 const GuestList = () => {
   const [guest, getGuest] = useState<Guest[]>([{}]);
@@ -87,33 +88,7 @@ const GuestList = () => {
       {user && (
         <>
           <Header guestLength={guest.length} signOut={sign_out} />
-
-          <div className="bg-[salmon] p-7 flex flex-col items-center">
-            {guest.length === 0 ? (
-              <div className="bg-[gray]">No Guest Yet</div>
-            ) : (
-              <table className="guest-table bg-[gray] w-[80%]">
-                <tbody>
-                  <tr>
-                    <th>FIRST NAME</th>
-                    <th>LAST NAME</th>
-                    <th>DATE</th>
-                    <th>TIME</th>
-                  </tr>
-                  {guest.map((guest: Guest) => {
-                    return (
-                      <tr key={Math.random()}>
-                        <td>{guest.first_name}</td>
-                        <td>{guest.last_name}</td>
-                        <td>{guest.date}</td>
-                        <td>{guest.time}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            )}
-          </div>
+          <GuestTable guest={guest} />
         </>
       )}
     </>

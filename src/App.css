@@ -18,9 +18,16 @@
 .guest-table tr,
 th,
 td {
-  border: 1px solid white;
   padding: 1rem;
-  color: white;
+}
+
+.guest-table {
+  border-collapse: collapse;
+  border: 3px solid #320300;
+}
+
+.guest-table tr:nth-child(even) {
+  background-color: #ffefbb;
 }
 
 .icon-class {
