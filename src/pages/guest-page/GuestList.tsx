@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { toast_notif } from "../../utils/toast";
 import Loading from "react-loading";
+import Header from "./components/Header";
 
 const GuestList = () => {
   const [guest, getGuest] = useState<Guest[]>([{}]);
@@ -85,10 +86,7 @@ const GuestList = () => {
 
       {user && (
         <>
-          <div className="bg-[aqua]">
-            <div>GUEST COUNT: {guest.length}</div>
-            <Button label="SIGN OUT" btnFunction={sign_out} />
-          </div>
+          <Header guestLength={guest.length} signOut={sign_out} />
 
           <div className="bg-[salmon] p-7 flex flex-col items-center">
             {guest.length === 0 ? (
