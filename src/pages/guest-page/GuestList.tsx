@@ -87,8 +87,14 @@ const GuestList = () => {
 
       {user && (
         <>
-          <Header guestLength={guest.length} signOut={sign_out} />
-          <GuestTable guest={guest} />
+          <div className="relative">
+            <div className="fixed w-full top-0">
+              <Header guestLength={guest.length} signOut={sign_out} />
+            </div>
+            <div className="mt-20">
+              <GuestTable guest={guest} />
+            </div>
+          </div>
         </>
       )}
     </>
