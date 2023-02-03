@@ -1,6 +1,9 @@
-import React, { FC } from "react";
+import { updateDoc, doc } from "firebase/firestore";
+import { FC, useState } from "react";
 import Button from "../../../components/Button";
 import InputField from "../../../components/InputField";
+import { db } from "../../../firebase/firebase-config";
+import { toast_notif } from "../../../utils/toast";
 
 interface Props {
   guestLength: number;
@@ -8,12 +11,63 @@ interface Props {
 }
 
 const Header: FC<Props> = ({ guestLength, signOut }) => {
+  const [onUpdateLivestreamUrl, setOnUpdateLivestreamUrl] = useState(false);
+  const [userInputLivestreamLink, setUserInputLivestreamLink] = useState("");
+
+  const updateLink = async () => {
+    try {
+      //todo: create loading
+      const LivestreamRef = doc(db, "livestreamLink", "e0dZx0UExIK6bC8EACHT");
+      await updateDoc(LivestreamRef, {
+        link: userInputLivestreamLink,
+      });
+      toast_notif({
+        message: `Updated! Your new link is ${userInputLivestreamLink}`,
+        theme_color: "light",
+      });
+      setOnUpdateLivestreamUrl(false);
+    } catch (e) {
+      toast_notif({
+        message: `${e}`,
+        theme_color: "dark",
+      });
+    }
+  };
+
   return (
     <header className="">
       <div className="bg-wd_coffee flex justify-around items-center pt-5 pb-5">
+        <div className="flex gap-5">
+          {onUpdateLivestreamUrl && (
+            <>
+              <InputField
+                value={userInputLivestreamLink}
+                onChange={(e) => {
+                  setUserInputLivestreamLink(e.target.value);
+                }}
+                inputWidth={"300px"}
+                placeholder="Enter Updated Livestream Link"
+              />
+              <Button
+                label="CANCEL"
+                btnFunction={() => {
+                  setOnUpdateLivestreamUrl(false);
+                }}
+              />
+            </>
+          )}
+          <Button
+            label={onUpdateLivestreamUrl ? "UPDATE" : "Update Livestream link"}
+            btnFunction={() => {
+              onUpdateLivestreamUrl
+                ? updateLink()
+                : setOnUpdateLivestreamUrl(true);
+            }}
+          />
+        </div>
         <div className="flex items-center gap-7">
           <div>
-            <InputField placeholder="Search (Optional)" />
+            {/* <InputField placeholder="Search (Optional)" /> */}
             {/* //optional tong search input field*/}
           </div>
           <div>
@@ -21,8 +75,8 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
               GUEST COUNT: <span className="text-[25px]">{guestLength} 🔥</span>
             </p>
           </div>
+          <Button label="SIGN OUT" btnFunction={signOut} />
         </div>
-        <Button label="SIGN OUT" btnFunction={signOut} />
       </div>
     </header>
   );
