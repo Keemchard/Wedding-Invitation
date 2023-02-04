@@ -2,6 +2,7 @@ import { updateDoc, doc } from "firebase/firestore";
 import { FC, useState } from "react";
 import Button from "../../../components/Button";
 import InputField from "../../../components/InputField";
+import Loading from "../../../components/Loading";
 import { db } from "../../../firebase/firebase-config";
 import { toast_notif } from "../../../utils/toast";
 
@@ -13,10 +14,11 @@ interface Props {
 const Header: FC<Props> = ({ guestLength, signOut }) => {
   const [onUpdateLivestreamUrl, setOnUpdateLivestreamUrl] = useState(false);
   const [userInputLivestreamLink, setUserInputLivestreamLink] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const updateLink = async () => {
     try {
-      //todo: create loading
+      setLoading(true);
       const LivestreamRef = doc(db, "livestreamLink", "e0dZx0UExIK6bC8EACHT");
       await updateDoc(LivestreamRef, {
         link: userInputLivestreamLink,
@@ -26,7 +28,10 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
         theme_color: "light",
       });
       setOnUpdateLivestreamUrl(false);
+      setUserInputLivestreamLink("");
+      setLoading(false);
     } catch (e) {
+      setLoading(false);
       toast_notif({
         message: `${e}`,
         theme_color: "dark",
@@ -38,32 +43,40 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
     <header className="">
       <div className="bg-wd_coffee flex justify-around items-center pt-5 pb-5">
         <div className="flex gap-5">
-          {onUpdateLivestreamUrl && (
+          {loading ? (
+            <Loading solo={false} />
+          ) : (
             <>
-              <InputField
-                value={userInputLivestreamLink}
-                onChange={(e) => {
-                  setUserInputLivestreamLink(e.target.value);
-                }}
-                inputWidth={"300px"}
-                placeholder="Enter Updated Livestream Link"
-              />
+              {onUpdateLivestreamUrl && (
+                <>
+                  <InputField
+                    value={userInputLivestreamLink}
+                    onChange={(e) => {
+                      setUserInputLivestreamLink(e.target.value);
+                    }}
+                    inputWidth={"300px"}
+                    placeholder="Enter Updated Livestream Link"
+                  />
+                  <Button
+                    label="CANCEL"
+                    btnFunction={() => {
+                      setOnUpdateLivestreamUrl(false);
+                    }}
+                  />
+                </>
+              )}
               <Button
-                label="CANCEL"
+                label={
+                  onUpdateLivestreamUrl ? "UPDATE" : "Update Livestream link"
+                }
                 btnFunction={() => {
-                  setOnUpdateLivestreamUrl(false);
+                  onUpdateLivestreamUrl
+                    ? updateLink()
+                    : setOnUpdateLivestreamUrl(true);
                 }}
               />
             </>
           )}
-          <Button
-            label={onUpdateLivestreamUrl ? "UPDATE" : "Update Livestream link"}
-            btnFunction={() => {
-              onUpdateLivestreamUrl
-                ? updateLink()
-                : setOnUpdateLivestreamUrl(true);
-            }}
-          />
         </div>
         <div className="flex items-center gap-7">
           <div>
