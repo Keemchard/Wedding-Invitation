@@ -65,7 +65,7 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
                     inputWidth={"300px"}
                     placeholder="Enter Updated Livestream Link"
                   />
-                  <div className="flex gap-1 w-full justify-around">
+                  <div className="edit-link-btn-div flex gap-1 w-full">
                     <Button
                       label="CANCEL"
                       btnFunction={() => {
