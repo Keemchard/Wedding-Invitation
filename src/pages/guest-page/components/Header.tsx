@@ -48,7 +48,7 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
   };
 
   return (
-    <header className="">
+    <header className="guest-header">
       <div className="bg-wd_coffee flex justify-around items-center pt-5 pb-5">
         <div className="flex gap-5">
           {loading ? (
@@ -56,7 +56,7 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
           ) : (
             <>
               {onUpdateLivestreamUrl && (
-                <>
+                <div className="edit-link-div flex gap-3">
                   <InputField
                     value={userInputLivestreamLink}
                     onChange={(e) => {
@@ -65,38 +65,37 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
                     inputWidth={"300px"}
                     placeholder="Enter Updated Livestream Link"
                   />
-                  <Button
-                    label="CANCEL"
-                    btnFunction={() => {
-                      setOnUpdateLivestreamUrl(false);
-                    }}
-                  />
-                </>
+                  <div className="flex gap-1 w-full justify-around">
+                    <Button
+                      label="CANCEL"
+                      btnFunction={() => {
+                        setOnUpdateLivestreamUrl(false);
+                      }}
+                    />
+                    <Button label="UPDATE" btnFunction={updateLink} />
+                  </div>
+                </div>
               )}
-              <Button
-                label={
-                  onUpdateLivestreamUrl ? "UPDATE" : "Update Livestream link"
-                }
-                btnFunction={() => {
-                  onUpdateLivestreamUrl
-                    ? updateLink()
-                    : setOnUpdateLivestreamUrl(true);
-                }}
-              />
+              {!onUpdateLivestreamUrl && (
+                <Button
+                  label="Update Livestream link"
+                  btnFunction={() => {
+                    setOnUpdateLivestreamUrl(true);
+                  }}
+                />
+              )}
             </>
           )}
         </div>
         <div className="flex items-center gap-7">
           <div>
-            {/* <InputField placeholder="Search (Optional)" /> */}
-            {/* //optional tong search input field*/}
-          </div>
-          <div>
             <p className="text-[20px] text-wd_mikado_yellow font-bold">
               GUEST COUNT: <span className="text-[25px]">{guestLength} 🔥</span>
             </p>
           </div>
-          <Button label="SIGN OUT" btnFunction={signOut} />
+          <div className="signout-btn">
+            <Button label="SIGN OUT" btnFunction={signOut} />
+          </div>
         </div>
       </div>
     </header>

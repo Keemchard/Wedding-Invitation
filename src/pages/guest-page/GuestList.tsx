@@ -91,7 +91,7 @@ const GuestList = () => {
             <div className="fixed w-full top-0">
               <Header guestLength={guest.length} signOut={sign_out} />
             </div>
-            <div className="mt-20">
+            <div className="guest-main-table mt-20">
               <GuestTable guest={guest} />
             </div>
           </div>
