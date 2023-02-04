@@ -4,6 +4,7 @@ import Button from "../../../components/Button";
 import InputField from "../../../components/InputField";
 import Loading from "../../../components/Loading";
 import { db } from "../../../firebase/firebase-config";
+import isValidUrl from "../../../utils/isValidUrl";
 import { toast_notif } from "../../../utils/toast";
 
 interface Props {
@@ -18,18 +19,25 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
 
   const updateLink = async () => {
     try {
-      setLoading(true);
-      const LivestreamRef = doc(db, "livestreamLink", "e0dZx0UExIK6bC8EACHT");
-      await updateDoc(LivestreamRef, {
-        link: userInputLivestreamLink,
-      });
-      toast_notif({
-        message: `Updated! Your new link is ${userInputLivestreamLink}`,
-        theme_color: "light",
-      });
-      setOnUpdateLivestreamUrl(false);
-      setUserInputLivestreamLink("");
-      setLoading(false);
+      if (isValidUrl(userInputLivestreamLink)) {
+        setLoading(true);
+        const LivestreamRef = doc(db, "livestreamLink", "e0dZx0UExIK6bC8EACHT");
+        await updateDoc(LivestreamRef, {
+          link: userInputLivestreamLink,
+        });
+        toast_notif({
+          message: `Updated! Your new link is ${userInputLivestreamLink}`,
+          theme_color: "light",
+        });
+        setOnUpdateLivestreamUrl(false);
+        setUserInputLivestreamLink("");
+        setLoading(false);
+      } else {
+        toast_notif({
+          message: "Invalid URL! 🤧",
+          theme_color: "dark",
+        });
+      }
     } catch (e) {
       setLoading(false);
       toast_notif({
