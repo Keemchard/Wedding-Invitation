@@ -30,9 +30,9 @@ const MainPage = () => {
               icon="uil uil-user-square"
               // bgColor="gray"
               // txtColor="white"
-              width="50px"
-              height="60px"
-              btnRadius="0.8rem" //TODO: make it circle 50%
+              // width="0px"
+              height="70px"
+              btnRadius="50%" //TODO: make it circle 50%
             />
           </Link>
         </div>
