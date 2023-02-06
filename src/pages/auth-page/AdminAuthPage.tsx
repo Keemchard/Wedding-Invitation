@@ -9,7 +9,7 @@ import AdminForm from "./components/AdminForm";
 const email = process.env.REACT_APP_ADMIN_EMAIL as string;
 const AdminAuthPage = () => {
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -37,11 +37,15 @@ const AdminAuthPage = () => {
     } catch (e) {
       setLoading(false);
       //remove clg
-      console.log(`Error: ${e}`);
-      setError(`INVALID PASSWORD! ${e}`);
-      setTimeout(() => {
-        setError("");
-      }, 5000);
+      // console.log(`Error: ${e}`);
+      // setError(`INVALID PASSWORD! ${e}`);
+      // setTimeout(() => {
+      //   setError("");
+      // }, 5000);
+      toast_notif({
+        message: `Invalid Password! ${e}`,
+        theme_color: "dark",
+      });
     }
   };
 
@@ -56,7 +60,7 @@ const AdminAuthPage = () => {
         setPassword={setPassword}
         onSubmit={onSubmit}
       />
-      {error && <div className="text-[red]">{error}</div>}
+      {/* {error && <div className="text-[red]">{error}</div>} */}
       {loading && (
         <div className="mt-3">
           <Loading solo={false} />
