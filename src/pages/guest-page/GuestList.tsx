@@ -38,7 +38,7 @@ const GuestList = () => {
       setLoading(true);
       await auth.signOut();
       toast_notif({
-        message: "Thank you!",
+        message: "Sign out success, Thank you!",
         theme_color: "dark",
         autoClose: 3000,
       });
@@ -91,7 +91,7 @@ const GuestList = () => {
             <div className="fixed w-full top-0">
               <Header guestLength={guest.length} signOut={sign_out} />
             </div>
-            <div className="guest-main-table mt-20">
+            <div className="guest-main-table mt-28">
               <GuestTable guest={guest} />
             </div>
           </div>

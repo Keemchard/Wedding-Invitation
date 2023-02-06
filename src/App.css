@@ -23,7 +23,7 @@ td {
 
 .guest-table {
   border-collapse: collapse;
-  border: 3px solid #320300;
+  /* border: 3px solid #320300; */
 }
 
 .guest-table tr:nth-child(even) {
@@ -81,9 +81,9 @@ td {
   .edit-link-div {
     flex-direction: column;
   }
-  .guest-main-table {
+  /* .guest-main-table {
     margin-top: 200px;
-  }
+  } */
   .guest-table {
     width: 100%;
     font-size: 14px;

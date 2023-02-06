@@ -94,7 +94,14 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
             </p>
           </div>
           <div className="signout-btn">
-            <Button label="SIGN OUT" btnFunction={signOut} />
+            <Button
+              label=""
+              icon="uil uil-sign-out-alt"
+              // width="50px"
+              height="70px"
+              btnRadius="50%"
+              btnFunction={signOut}
+            />
           </div>
         </div>
       </div>

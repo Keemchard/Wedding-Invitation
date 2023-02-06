@@ -7,11 +7,11 @@ interface Prop {
 
 const GuestTable = ({ guest }: Prop) => {
   return (
-    <div className="p-7 flex flex-col items-center">
+    <div className="flex flex-col items-center">
       {guest.length === 0 ? (
         <div className="bg-[gray]">No Guest Yet</div>
       ) : (
-        <table className="guest-table w-[80%]">
+        <table className="guest-table w-[100%]">
           <tbody>
             <tr className="bg-wd_coffee text-wd_mikado_yellow text-left">
               <th>FIRST NAME</th>
