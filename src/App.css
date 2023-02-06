@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dancing+Script:wght@500&family=Italianno&family=Montserrat:wght@500&family=Poppins&display=swap");
+
+.wed-title {
+  /* font-family: "Cinzel Decorative", cursive; */
+  /* font-family: "Dancing Script", cursive; */
+  font-family: "Italianno", cursive;
+  /* font-weight: bold; */
+}
+
 .timeline-con:hover .timeline-circle {
   /* mikado yellow */
   background-color: #ffc301;
@@ -71,6 +80,14 @@ td {
     width: 80%;
     margin: 1rem 0;
   }
+  .section-1-main {
+    background-image: url(assets/mock/wed-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .sec-1-bg-img {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -81,9 +98,12 @@ td {
   .edit-link-div {
     flex-direction: column;
   }
-  /* .guest-main-table {
-    margin-top: 200px;
-  } */
+  .wed-1 {
+    font-size: 60px;
+  }
+  .wed-2 {
+    font-size: 40px;
+  }
   .guest-table {
     width: 100%;
     font-size: 14px;
@@ -115,5 +135,23 @@ td {
   }
   .sec-5-form {
     padding: 0;
+  }
+  .wed-text {
+    line-height: 20px;
+  }
+  .wed-1 {
+    font-size: 50px;
+  }
+  .wed-2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .wed-1 {
+    font-size: 40px;
+  }
+  .wed-2 {
+    font-size: 30px;
   }
 }
