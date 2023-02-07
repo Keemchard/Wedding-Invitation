@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dancing+Script:wght@500&family=Italianno&family=Montserrat:wght@500&family=Poppins&display=swap");
 
+.section-1-main {
+  background-image: url(assets/mock/wed-bg.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
 .wed-title {
   /* font-family: "Cinzel Decorative", cursive; */
   /* font-family: "Dancing Script", cursive; */

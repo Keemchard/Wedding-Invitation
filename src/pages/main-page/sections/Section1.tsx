@@ -8,12 +8,12 @@ const goToSecFive = () => {
 
 const Section1 = () => {
   return (
-    <div className="section-1-main relative p-[20px] h-[500px] flex items-center justify-center">
-      <img
+    <div className="section-1-main relative p-[20px] h-[550px] flex items-center justify-center">
+      {/* <img
         src={BackGroundImage}
         alt="wedding bg"
         className="sec-1-bg-img absolute top-0 h-full w-full"
-      />
+      /> */}
       <div className="bg-wd_coffee bg-opacity-60 z-20 p-[30px] w-[600px] h-[300px] rounded flex flex-col justify-center items-center">
         <div className="wed-text pb-[30px] text-center text-white">
           <p className="wed-title wed-1 text-[80px] leading-[4rem]">
