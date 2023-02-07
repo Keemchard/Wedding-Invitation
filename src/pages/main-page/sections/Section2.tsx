@@ -11,12 +11,12 @@ const Section2 = () => {
         />
       </div>
       <div className="m-[10px] text-white">
-        <p className="font-bold text-[1.5rem] border-b-2 border-b-wd_mikado_yellow mb-[1rem]">
+        <p className="head-text font-bold text-[1.5rem] border-b-2 border-b-wd_mikado_yellow mb-[1rem]">
           Description
         </p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
         repudiandae sunt natus obcaecati suscipit tenetur cum libero nemo unde
-        expedita.
+        expedita. Lorem ipsum dolor sit amet.lorem30
       </div>
     </div>
   );

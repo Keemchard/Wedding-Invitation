@@ -7,6 +7,11 @@
   background-repeat: no-repeat;
 }
 
+.head-text {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: bold;
+}
+
 .wed-title {
   /* font-family: "Cinzel Decorative", cursive; */
   /* font-family: "Dancing Script", cursive; */
