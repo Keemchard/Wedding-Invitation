@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { toast } from "react-toastify";
 import Button from "../../../components/Button";
 import { toast_notif } from "../../../utils/toast";
-
 import GuestForm from "./components/GuestForm";
 
-const Section5 = () => {
+interface Prop {
+  section5Ref: React.MutableRefObject<HTMLDivElement | null>;
+}
+
+const Section5: FC<Prop> = ({ section5Ref }) => {
   const [accepted, setAccepted] = useState(false);
 
   const decline = () => {
@@ -21,7 +24,10 @@ const Section5 = () => {
   };
 
   return (
-    <div className="guest-form-main-con flex justify-center items-center p-[10px]">
+    <div
+      ref={section5Ref}
+      className="guest-form-main-con flex justify-center items-center p-[10px]"
+    >
       <div className="guest-form-con p-[20px]">
         <div>
           <p className="text-[2rem] font-bold text-center">

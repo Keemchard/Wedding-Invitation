@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import Button from "../../../components/Button";
 import BackGroundImage from "../../../assets/mock/sec-1-mock-bg.jpg";
 
@@ -6,7 +6,11 @@ const goToSecFive = () => {
   alert("hey");
 };
 
-const Section1 = () => {
+interface Prop {
+  handleClick: () => void;
+}
+
+const Section1: FC<Prop> = ({ handleClick }) => {
   return (
     <div className="section-1-main relative p-[20px] h-[550px] flex items-center justify-center">
       {/* <img
@@ -25,7 +29,7 @@ const Section1 = () => {
         </div>
         <Button
           label="YOU ARE INVITED!"
-          btnFunction={goToSecFive}
+          btnFunction={handleClick}
           // bgColor="#6B3E2E"
           // txtColor="white"
         />

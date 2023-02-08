@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
@@ -9,17 +9,25 @@ import Section4 from "./sections/Section4";
 import Section5 from "./sections/Section5";
 
 const MainPage = () => {
+  const section5Ref = useRef<HTMLDivElement | null>(null);
+
+  const handleClick = () => {
+    if (section5Ref.current) {
+      section5Ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="main relative w-full bg-white">
         <div>
-          <Section1 />
+          <Section1 handleClick={handleClick} />
         </div>
         <div className="section-con w-[75%] m-auto p-[20px]">
           <Section2 />
           <Section3 />
           <Section4 />
-          <Section5 />
+          <Section5 section5Ref={section5Ref} />
         </div>
         <Footer />
 
