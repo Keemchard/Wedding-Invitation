@@ -15,7 +15,10 @@ const GuestForm = () => {
   const addGuest = async (e: FormEvent) => {
     e.preventDefault();
     if (firstName.trim() === "" || lastName.trim() === "") {
-      alert("fields cannot be empty");
+      toast_notif({
+        message: "⛔ Field(s) Cannot Be Empty!",
+        theme_color: "dark",
+      });
       return;
     }
     try {
