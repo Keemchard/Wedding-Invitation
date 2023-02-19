@@ -26,7 +26,7 @@ const MainPage = () => {
         <div className="section-con w-[75%] m-auto p-[20px]">
           <Section2 />
           <Section3 />
-          <Section4 />
+          {/* <Section4 /> */}
           <Section5 section5Ref={section5Ref} />
         </div>
         <Footer />

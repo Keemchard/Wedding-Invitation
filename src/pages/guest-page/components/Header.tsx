@@ -50,7 +50,7 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
   return (
     <header className="guest-header">
       <div className="bg-wd_coffee flex justify-around items-center pt-5 pb-5">
-        <div className="flex gap-5">
+        {/* <div className="flex gap-5">
           {loading ? (
             <Loading solo={false} />
           ) : (
@@ -86,8 +86,8 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
               )}
             </>
           )}
-        </div>
-        <div className="flex items-center gap-7">
+        </div> */}
+        <div className="flex items-center gap-32">
           <div>
             <p className="text-[20px] text-wd_mikado_yellow font-bold">
               GUEST COUNT: <span className="text-[25px]">{guestLength} 🔥</span>
