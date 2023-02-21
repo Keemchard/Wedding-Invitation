@@ -19,13 +19,16 @@ const Section1: FC<Prop> = ({ handleClick }) => {
         className="sec-1-bg-img absolute top-0 h-full w-full"
       /> */}
       <div className="bg-wd_coffee bg-opacity-60 z-20 p-[30px] w-[600px] h-[300px] rounded flex flex-col justify-center items-center">
-        <div className="wed-text pb-[30px] text-center text-white">
-          <p className="wed-title wed-1 text-[80px] leading-[4rem]">
-            <span className="text-wd_mikado_yellow">She</span>ila{" "}
-            <span className="ml-3 mr-3">And</span> Ji
-            <span className="text-wd_mikado_yellow">mel</span>
+        <div className="wed-text pb-[10px] text-center text-white">
+          <p className="wed-title wed-1 text-[80px] leading-[3rem]">
+            <span className="text-wd_mikado_yellow">Jimel</span>{" "}
+            <span className="ml-3 mr-3">And</span>
+            <span className="text-wd_mikado_yellow">Sheila</span>
           </p>
-          <p className="wed-title wed-2 text-[50px]">Wedding Invitation</p>
+          <p className="wed-title wed-1 text-[60px]">Wedding </p>
+          <p className="wed-date text-[15px] mb-2 text-gray-200">
+            March 18, 2023
+          </p>
         </div>
         <Button
           label="YOU ARE INVITED!"

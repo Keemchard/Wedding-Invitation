@@ -164,6 +164,10 @@ td {
   .wed-2 {
     font-size: 40px;
   }
+  .wed-date {
+    margin: 20px 0;
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 365px) {

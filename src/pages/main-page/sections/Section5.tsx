@@ -36,15 +36,15 @@ const Section5: FC<Prop> = ({ section5Ref }) => {
         </div>
         <div className="flex justify-center gap-10 my-[2.5rem]">
           <Button
-            label="❌ Decline"
-            btnFunction={decline}
-            // icon="uil uil-times-circle"
+            label="✅ Accept"
+            btnFunction={accept}
             // bgColor="#6B3E2E"
             // txtColor="white"
           />
           <Button
-            label="✅ Accept"
-            btnFunction={accept}
+            label="❌ Decline"
+            btnFunction={decline}
+            // icon="uil uil-times-circle"
             // bgColor="#6B3E2E"
             // txtColor="white"
           />
