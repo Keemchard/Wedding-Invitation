@@ -135,6 +135,9 @@ td {
   .edit-link-btn-div {
     justify-content: space-around;
   }
+  .sec-2-sub {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
