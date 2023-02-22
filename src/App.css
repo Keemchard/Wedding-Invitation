@@ -7,6 +7,11 @@
   font-style: italic;
 }
 
+/* .main {
+  background-image: url(assets/main\ bg/flower-everywhere.jpg);
+  background-size: cover;
+} */
+
 .section-1-main {
   background-image: url(assets/mock/wed-bg.jpg);
   background-size: cover;
