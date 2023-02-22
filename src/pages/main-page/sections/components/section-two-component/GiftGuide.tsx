@@ -4,7 +4,7 @@ const GiftGuide = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center">
       <p className="head-text text-[1.5rem] border-b-4 border-b-wd_mikado_yellow rounded px-[1rem] font-bold mb-6">
-        GiftGuide
+        Gift Guide
       </p>
       <p className="text-[20px]  text-wd_coffee">
         Your presence is present enough in this happiest moment of our lives.

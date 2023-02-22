@@ -9,7 +9,7 @@ const SnapShare = () => {
       <p className="text-[20px]  text-wd_coffee">
         Help us capture the love! Use our official wedding hashtag
       </p>
-      <p className="text-[20px]  text-wd_coffee font-bold hover:text-wd_mikado_yellow">
+      <p className="text-[20px]  text-wd_coffee font-bold hover:text-wd_mikado_yellow transition-[0.25s]">
         #SHEILAparinniJIMELsahuli
       </p>
     </div>
