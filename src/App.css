@@ -163,11 +163,10 @@ td {
   .sec-5-form {
     padding: 0;
   }
-  .wed-text {
-    line-height: 20px;
-  }
+
   .wed-1 {
-    font-size: 50px;
+    font-size: 55px;
+    line-height: 50px;
   }
   .wed-2 {
     font-size: 40px;

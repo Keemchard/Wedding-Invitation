@@ -20,7 +20,7 @@ const Button: FC<ButtonType> = ({
         width: width,
         height: height,
       }}
-      className="bg-wd_mikado_yellow text-black relative py-[17px] px-[35px] rounded hover:scale-[1.1] transition-[0.25s]"
+      className="font-bold bg-wd_mikado_yellow text-black relative py-[17px] px-[35px] rounded hover:scale-[1.1] transition-[0.25s] tracking-[0.5px]"
       onClick={btnFunction}
     >
       <i className={`${icon} icon-class`}></i>

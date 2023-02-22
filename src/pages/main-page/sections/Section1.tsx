@@ -37,7 +37,7 @@ const Section1: FC<Prop> = ({ handleClick }) => {
             label="YOU ARE INVITED!"
             btnFunction={handleClick}
             // bgColor="#6B3E2E"
-            // txtColor="white"
+            txtColor="#7F5946"
           />
           <div className="tracking-[2.5px] leading-3 mt-10 mb-4">
             <p className="text-[13px] font-bold mb-2">
