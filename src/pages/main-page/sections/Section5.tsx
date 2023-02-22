@@ -30,7 +30,7 @@ const Section5: FC<Prop> = ({ section5Ref }) => {
     >
       <div className="guest-form-con p-[20px]">
         <div>
-          <p className="text-[2rem] font-bold text-center">
+          <p className="head-text text-[2rem] font-bold text-center">
             Will You Attend This Event?
           </p>
         </div>
