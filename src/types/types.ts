@@ -15,6 +15,7 @@ export type Timeline = {
   title: string;
   description: string;
   box_position?: string;
+  image?: string;
 };
 
 export type Guest = {

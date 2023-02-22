@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
+import TimelineSection from "./sections/components/TimelineSection";
 import Section1 from "./sections/Section1";
 import Section2 from "./sections/Section2";
 import Section3 from "./sections/Section3";
@@ -25,7 +26,10 @@ const MainPage = () => {
         </div>
         <div className="section-con w-[75%] m-auto p-[20px]">
           <Section2 />
+          {/* below is manual timeline */}
           <Section3 />
+          {/* below is library timeline */}
+          {/* <TimelineSection /> */}
           {/* <Section4 /> */}
           <Section5 section5Ref={section5Ref} />
         </div>
