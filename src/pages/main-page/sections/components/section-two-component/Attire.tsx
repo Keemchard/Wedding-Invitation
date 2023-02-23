@@ -11,7 +11,7 @@ const Attire = () => {
         We request everyone to arrive in FORMAL or SEMI-FORMAL wear
       </p>
       <img
-        className="absolute w-36 top-[-15px] left-[0] rotate-[5deg] opacity-20"
+        className="absolute w-36 top-[-40px] left-[0] rotate-[5deg] opacity-20"
         src={attire}
         alt={attire}
       />
