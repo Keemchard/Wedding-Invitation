@@ -21,13 +21,13 @@ const Section2 = () => {
           </p>
         </div>
       </div> */}
-      <div className="hover:scale-[1.05] transition-[0.25s] sec-2-sub flex justify-center items-center my-28 w-[500px] m-auto">
+      <div className="hover:scale-[1.05] transition-[0.25s] sec-2-sub flex justify-center items-center my-32 w-[500px] m-auto">
         <Attire />
       </div>
-      <div className="hover:scale-[1.05] transition-[0.25s] sec-2-sub flex justify-center items-center my-28 w-[500px] m-auto">
+      <div className="hover:scale-[1.05] transition-[0.25s] sec-2-sub flex justify-center items-center my-32 w-[500px] m-auto">
         <GiftGuide />
       </div>
-      <div className="hover:scale-[1.05] transition-[0.25s] sec-2-sub flex justify-center items-center my-28 w-[500px] m-auto">
+      <div className="hover:scale-[1.05] transition-[0.25s] sec-2-sub flex justify-center items-center my-32 w-[500px] m-auto">
         <SnapShare />
       </div>
     </div>
