@@ -18,7 +18,7 @@ const Section1: FC<Prop> = ({ handleClick }) => {
         alt="wedding bg"
         className="sec-1-bg-img absolute top-0 h-full w-full"
       /> */}
-      <div className="bg-wd_coffee bg-opacity-60 z-20 px-[30px] py-[50px] w-[600px] rounded flex flex-col justify-center items-center">
+      <div className="bg-wd_coffee bg-opacity-60 z-20 px-[30px] py-[50px] w-[750px] rounded flex flex-col justify-center items-center">
         <div className="wed-text pb-[10px] text-center text-white">
           <div>
             <p className="wed-title wed-1 text-[80px] leading-[4rem]">
@@ -38,6 +38,7 @@ const Section1: FC<Prop> = ({ handleClick }) => {
             btnFunction={handleClick}
             // bgColor="#6B3E2E"
             txtColor="#7F5946"
+            fontWeight="bold"
           />
           <div className="tracking-[2.5px] leading-3 mt-10 mb-4">
             <p className="text-[13px] font-bold mb-2">

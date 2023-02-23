@@ -10,7 +10,7 @@ const TimeLine: FC<Prop> = ({ timeline }) => {
   return (
     <>
       <div className="bg-[tertiary] max-w-[600px] relative">
-        <div className="line bg-black h-[76%] w-[2px] absolute left-0 right-0 ml-auto mr-auto z-10"></div>
+        <div className="line bg-black h-[79%] w-[2px] absolute left-0 right-0 ml-auto mr-auto z-10"></div>
         {timeline.map((item) => {
           return (
             <div key={item.id}>

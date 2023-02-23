@@ -2,6 +2,7 @@ export type ButtonType = {
   label: string;
   bgColor?: string;
   txtColor?: string;
+  fontWeight?: string;
   btnRadius?: string;
   width?: string;
   height?: string;
