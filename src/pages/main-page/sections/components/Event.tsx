@@ -9,7 +9,7 @@ const Event: FC<EventProp> = ({ timeline }) => {
   return (
     <>
       <div
-        className="sec-3-event bg-[white] m-[10px] flex"
+        className="sec-3-event bg-transparent m-[10px] flex"
         style={{ justifyContent: box_position }}
       >
         <div className="timeline-con w-[50%] px-[1rem] relative ">

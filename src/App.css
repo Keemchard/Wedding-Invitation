@@ -7,10 +7,23 @@
   font-style: italic;
 }
 
-/* .main {
-  background-image: url(assets/main\ bg/flower-everywhere.jpg);
-  background-size: cover;
-} */
+.main {
+  background-image: linear-gradient(
+    to right top,
+    #fdebdf,
+    #feeee4,
+    #fff0e9,
+    #fff3ee,
+    #fff6f3,
+    #fff8f6,
+    #fff9f9,
+    #fefbfb,
+    #fefcfd,
+    #fefdfe,
+    #fefeff,
+    #ffffff
+  );
+}
 
 .section-1-main {
   background-image: url(assets/mock/wed-bg.jpg);
@@ -108,6 +121,7 @@ td {
     background-image: url(assets/mock/wed-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 8px;
   }
   .sec-1-bg-img {
     display: none;

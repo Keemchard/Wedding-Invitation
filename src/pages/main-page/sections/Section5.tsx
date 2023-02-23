@@ -26,7 +26,7 @@ const Section5: FC<Prop> = ({ section5Ref }) => {
   return (
     <div
       ref={section5Ref}
-      className="guest-form-main-con flex justify-center items-center p-[10px]"
+      className="guest-form-main-con flex justify-center items-center p-[10px] my-14"
     >
       <div className="guest-form-con p-[20px]">
         <div>
