@@ -5,7 +5,7 @@ const Button: FC<ButtonType> = ({
   label,
   btnFunction,
   bgColor,
-  txtColor,
+  txtColor = "white",
   btnRadius,
   width,
   height,

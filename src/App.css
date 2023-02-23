@@ -73,7 +73,7 @@ td {
 }
 
 .guest-table tr:nth-child(even) {
-  background-color: #ffefbb;
+  background-color: #fff0ed;
 }
 
 .icon-class {

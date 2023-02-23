@@ -18,13 +18,13 @@ const Section1: FC<Prop> = ({ handleClick }) => {
         alt="wedding bg"
         className="sec-1-bg-img absolute top-0 h-full w-full"
       /> */}
-      <div className="bg-wd_coffee bg-opacity-60 z-20 px-[30px] py-[50px] w-[750px] rounded flex flex-col justify-center items-center">
-        <div className="wed-text pb-[10px] text-center text-white">
+      <div className="bg-[#E1726E] bg-opacity-20 z-20 px-[30px] py-[50px] w-[750px] rounded flex flex-col justify-center items-center">
+        <div className="wed-text pb-[10px] text-center text-wd_coffee">
           <div>
             <p className="wed-title wed-1 text-[80px] leading-[4rem]">
-              <span className="text-wd_mikado_yellow">Jimel</span>{" "}
-              <span className="ml-3 mr-3">And</span>
-              <span className="text-wd_mikado_yellow">Sheila</span>
+              <span className="text-wd_mikado_yellow font-semibold">Jimel</span>{" "}
+              <span className="ml-4 mr-6">&</span>
+              <span className="text-wd_mikado_yellow font-bold">Sheila</span>
             </p>
             <p className="wed-title wed-1 text-[60px]">Wedding </p>
           </div>
@@ -37,7 +37,7 @@ const Section1: FC<Prop> = ({ handleClick }) => {
             label="YOU ARE INVITED!"
             btnFunction={handleClick}
             // bgColor="#6B3E2E"
-            txtColor="#7F5946"
+            txtColor="white"
             fontWeight="bold"
           />
           <div className="tracking-[2.5px] leading-3 mt-10 mb-4">

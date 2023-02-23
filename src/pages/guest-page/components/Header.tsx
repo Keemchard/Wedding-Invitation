@@ -49,7 +49,7 @@ const Header: FC<Props> = ({ guestLength, signOut }) => {
 
   return (
     <header className="guest-header">
-      <div className="bg-wd_coffee flex justify-around items-center pt-5 pb-5">
+      <div className="bg-[#FDD6D6] flex justify-around items-center pt-5 pb-5">
         {/* <div className="flex gap-5">
           {loading ? (
             <Loading solo={false} />

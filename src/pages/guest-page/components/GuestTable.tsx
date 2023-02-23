@@ -13,7 +13,7 @@ const GuestTable = ({ guest }: Prop) => {
       ) : (
         <table className="guest-table w-[100%]">
           <tbody>
-            <tr className="bg-wd_coffee text-wd_mikado_yellow text-left">
+            <tr className="bg-[#FDD6D6] text-wd_mikado_yellow text-left">
               <th>FIRST NAME</th>
               <th>LAST NAME</th>
               <th>DATE</th>
