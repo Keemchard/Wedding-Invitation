@@ -32,7 +32,7 @@ const Section1: FC<Prop> = ({ handleClick }) => {
                 Sheila
               </span>
             </p>
-            <p className="wed-title wed-1 text-[60px] drop-shadow-lg">
+            <p className="wed-title wed-1 text-[60px] font-semibold tracking-[2px] drop-shadow-lg">
               Wedding{" "}
             </p>
           </div>
