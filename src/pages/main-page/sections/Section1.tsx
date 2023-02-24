@@ -21,17 +21,25 @@ const Section1: FC<Prop> = ({ handleClick }) => {
       <div className="bg-[#E1726E] bg-opacity-20 z-20 px-[30px] py-[50px] w-[750px] rounded flex flex-col justify-center items-center">
         <div className="wed-text pb-[10px] text-center text-wd_coffee">
           <div>
-            <p className="wed-title wed-1 text-[80px] leading-[4rem]">
-              <span className="text-wd_mikado_yellow font-semibold">Jimel</span>{" "}
-              <span className="ml-4 mr-6">&</span>
-              <span className="text-wd_mikado_yellow font-bold">Sheila</span>
+            <p className="wed-title wed-1 text-[80px] leading-[4rem] mt-5 tracking-[1px]">
+              <span className="text-wd_mikado_yellow font-semibold drop-shadow-xl">
+                Jimel
+              </span>{" "}
+              <span className="ml-4 mr-6 text-wd_mikado_yellow font-semibold drop-shadow-lg">
+                &
+              </span>
+              <span className="text-wd_mikado_yellow font-semibold drop-shadow-xl">
+                Sheila
+              </span>
             </p>
-            <p className="wed-title wed-1 text-[60px]">Wedding </p>
+            <p className="wed-title wed-1 text-[60px] drop-shadow-lg">
+              Wedding{" "}
+            </p>
           </div>
-          <div className="tracking-[2.5px] mt-10 mb-4">
-            <p className="text-[14.5px] font-bold mb-2">
+          <div className="tracking-[2.5px] mt-12 mb-4">
+            {/* <p className="text-[14.5px] font-bold mb-2">
               PLEASE JOIN US AS WE CELEBRATE OUR WEDDING!
-            </p>
+            </p> */}
           </div>
           <Button
             label="YOU ARE INVITED!"

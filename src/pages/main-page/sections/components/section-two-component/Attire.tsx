@@ -8,10 +8,11 @@ const Attire = () => {
         Attire
       </p>
       <p className="text-[20px]  text-wd_coffee">
-        We request everyone to arrive in FORMAL or SEMI-FORMAL wear
+        We request everyone to arrive in
       </p>
+      <p className="text-[20px]  text-wd_coffee">FORMAL or SEMI-FORMAL wear</p>
       <img
-        className="absolute w-36 top-[-40px] left-[0] rotate-[5deg] opacity-20"
+        className="absolute w-36 top-[-45px] left-[-55px] rotate-[5deg] opacity-20"
         src={attire}
         alt={attire}
       />
