@@ -13,7 +13,7 @@ const GiftGuide = () => {
         appreciated to help us jumpstart our married life.
       </p>
       <img
-        className="absolute w-32 top-[0px] right-[0px] opacity-30"
+        className="absolute w-32 top-[0px] right-[0px] opacity-20"
         src={gift}
         alt={gift}
       />

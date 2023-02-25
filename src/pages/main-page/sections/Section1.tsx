@@ -25,7 +25,7 @@ const Section1: FC<Prop> = ({ handleClick }) => {
               <span className="text-wd_mikado_yellow font-semibold drop-shadow-xl">
                 Jimel
               </span>{" "}
-              <span className="ml-4 mr-6 text-wd_mikado_yellow font-semibold drop-shadow-lg">
+              <span className="ml-1 mr-3 text-wd_mikado_yellow font-semibold drop-shadow-lg">
                 &
               </span>
               <span className="text-wd_mikado_yellow font-semibold drop-shadow-xl">

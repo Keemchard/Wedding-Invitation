@@ -15,7 +15,7 @@ const SnapShare = () => {
         #SHEILAparinniJIMELsahuli
       </p>
       <img
-        className="absolute w-28 bottom-[-17px] left-[-55px] rotate-[-35deg] opacity-40"
+        className="absolute w-28 bottom-[-17px] left-[-55px] rotate-[-35deg] opacity-20"
         src={camera}
         alt={camera}
       />
