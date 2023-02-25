@@ -10,7 +10,9 @@ const GuestTable = ({ guest }: Prop) => {
   return (
     <div className="flex flex-col items-center">
       {guest.length === 0 ? (
-        <div className="bg-[gray]">No Guest Yet</div>
+        <div className="my-7 font-bold text-[24px] text-wd_mikado_yellow">
+          No Guest Yet
+        </div>
       ) : (
         <table className="guest-table w-[100%]">
           <tbody>
