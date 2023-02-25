@@ -48,15 +48,15 @@ const MainPage = () => {
             />
           </Link>
         </div>
-        {/* ---------------------------- */}
-        <div className="fixed font-bold top-0 left-0 h-[100vh] w-full flex flex-col justify-center items-center bg-wd_coffee bg-opacity-[0.7] z-50">
+        {/* ------------note to self: uncomment code below if will make some changes in production---------------- */}
+        {/* <div className="fixed font-bold top-0 left-0 h-[100vh] w-full flex flex-col justify-center items-center bg-wd_coffee bg-opacity-[0.7] z-50">
           <div>
             <p className="text-[4rem]">🚧</p>
           </div>
           <div className="text-[1.7rem] text-wd_mikado_yellow">
             <p>UNDER CONSTRUCTION</p>
           </div>
-        </div>
+        </div> */}
         {/* ---------------------------- */}
       </div>
     </>
