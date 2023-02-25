@@ -1,5 +1,2 @@
-# Online Wedding Invitation 📩💚
+# Jimel And Sheila Wedding Invitation 📩💚
 
-
-
-## Mr. & Mrs. Surname
