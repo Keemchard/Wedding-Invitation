@@ -14,7 +14,7 @@ const Section5: FC<Prop> = ({ section5Ref }) => {
   const decline = () => {
     setAccepted(false);
     toast_notif({
-      message: "Ow Why?, anyways Thanks!",
+      message: "Thank you, we understand and respect your decision 🤍",
       theme_color: "dark",
     });
   };
