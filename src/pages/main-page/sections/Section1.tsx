@@ -19,7 +19,7 @@ const Section1: FC<Prop> = ({ handleClick }) => {
         className="sec-1-bg-img absolute top-0 h-full w-full"
       /> */}
       <div className="bg-[#E1726E] bg-opacity-20 z-20 px-[30px] py-[50px] w-[750px] rounded flex flex-col justify-center items-center">
-        <div className="wed-text pb-[10px] text-center text-wd_coffee">
+        <div className="wed-text sec-1-sub-details pb-[10px] text-center text-wd_coffee">
           <div>
             <p className="wed-title wed-1 text-[80px] leading-[4rem] mt-5 tracking-[1px]">
               <span className="text-wd_mikado_yellow font-semibold drop-shadow-xl">
@@ -48,13 +48,13 @@ const Section1: FC<Prop> = ({ handleClick }) => {
             txtColor="white"
             fontWeight="bold"
           />
-          <div className="tracking-[2.5px] leading-3 mt-10 mb-4">
+          <div className="sec-1-sub-details tracking-[2.5px] leading-3 mt-10 mb-4">
             <p className="text-[13px] font-bold mb-2">
               MARCH 18, 2023 | SATURDAY
             </p>
             <p className="text-[11px]">AT 3:00 IN THE AFTERNOON</p>
           </div>
-          <div className="tracking-[2.5px] leading-3 mt-5">
+          <div className="sec-1-sub-details tracking-[2.5px] leading-3 mt-5">
             <p className="text-[13px] font-bold mb-2">
               PRISCILLA CRYSTAL PALACE
             </p>

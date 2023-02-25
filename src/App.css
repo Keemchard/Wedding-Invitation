@@ -32,6 +32,10 @@
   background-repeat: no-repeat;
 }
 
+.sec-1-sub-details {
+  text-shadow: 1px 1px 0px #ffffff;
+}
+
 .head-text {
   font-family: "Cinzel Decorative", cursive;
   font-weight: bold;
