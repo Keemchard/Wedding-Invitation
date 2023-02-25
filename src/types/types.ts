@@ -2,6 +2,7 @@ export type ButtonType = {
   label: string;
   bgColor?: string;
   txtColor?: string;
+  fontWeight?: string;
   btnRadius?: string;
   width?: string;
   height?: string;
@@ -15,6 +16,7 @@ export type Timeline = {
   title: string;
   description: string;
   box_position?: string;
+  image?: string;
 };
 
 export type Guest = {

@@ -14,10 +14,11 @@ const AdminForm: FC<Prop> = ({ password, setPassword, onSubmit }) => {
   return (
     <form onSubmit={onSubmit} className="flex flex-col items-center w-[320px]">
       <div className="mb-5">
-        <p className="text-[30px]">Admin Login</p>
+        <p className="head-text text-[30px] font-bold">Admin Login</p>
       </div>
       <div className="flex flex-col gap-2 w-full">
         <InputField
+          placeholder="Password"
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);
@@ -27,16 +28,16 @@ const AdminForm: FC<Prop> = ({ password, setPassword, onSubmit }) => {
           type="submit"
           value="LOGIN"
           inputWeight="bold"
-          inputBgColor="#7F5946"
+          inputBgColor="#E1726E"
           inputTextColor="white"
         />
       </div>
       <div className="mt-[0.5rem] w-[100%]">
         <div>
-          Not a user?{" "}
+          Not an admin?{" "}
           <Link
             to="/"
-            className="text-wd_coffee hover:text-wd_mikado_yellow font-bold underline"
+            className="text-[#E1726E] hover:text-wd_coffee font-bold underline"
           >
             Back To Home Page
           </Link>

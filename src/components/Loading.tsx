@@ -18,7 +18,7 @@ interface Prop {
 
 const Loading: FC<Prop> = ({
   type = "spin",
-  color = "#FFC301",
+  color = "#E1726E",
   solo = true,
 }) => {
   return (

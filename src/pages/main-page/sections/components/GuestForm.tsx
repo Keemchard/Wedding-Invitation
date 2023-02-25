@@ -58,7 +58,7 @@ const GuestForm = () => {
       <div className="sec-5-field flex gap-10">
         <InputField
           type="text"
-          placeholder="Your Awesome First Name"
+          placeholder="First Name"
           inputBgColor="white"
           value={firstName}
           onChange={(e) => {
@@ -67,7 +67,7 @@ const GuestForm = () => {
         />
         <InputField
           type="text"
-          placeholder="Your Cool Last Name"
+          placeholder="Last Name"
           inputBgColor="white"
           value={lastName}
           onChange={(e) => {

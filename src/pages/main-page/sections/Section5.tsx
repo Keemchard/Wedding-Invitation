@@ -26,25 +26,25 @@ const Section5: FC<Prop> = ({ section5Ref }) => {
   return (
     <div
       ref={section5Ref}
-      className="guest-form-main-con flex justify-center items-center p-[10px]"
+      className="guest-form-main-con flex justify-center items-center p-[10px] my-14"
     >
       <div className="guest-form-con p-[20px]">
         <div>
-          <p className="text-[2rem] font-bold text-center">
+          <p className="head-text text-[2rem] font-bold text-center">
             Will You Attend This Event?
           </p>
         </div>
         <div className="flex justify-center gap-10 my-[2.5rem]">
           <Button
-            label="❌ Decline"
-            btnFunction={decline}
-            // icon="uil uil-times-circle"
+            label="✅ Accept"
+            btnFunction={accept}
             // bgColor="#6B3E2E"
             // txtColor="white"
           />
           <Button
-            label="✅ Accept"
-            btnFunction={accept}
+            label="❌ Decline"
+            btnFunction={decline}
+            // icon="uil uil-times-circle"
             // bgColor="#6B3E2E"
             // txtColor="white"
           />

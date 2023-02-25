@@ -10,7 +10,7 @@ interface InputType extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InputField: FC<Partial<InputType>> = ({
-  inputBorder = "1px solid #6B3E2E",
+  inputBorder = "1px solid black",
   inputTextColor = "black",
   inputBgColor = "white",
   inputWidth,

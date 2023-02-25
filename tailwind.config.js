@@ -8,7 +8,7 @@ module.exports = {
         secondary: "gray",
         tertiary: "salmon",
         wd_coffee: "#7F5946",
-        wd_mikado_yellow: "#FFC301",
+        wd_mikado_yellow: "#E1726E",
         wd_dark_siena: "#320300",
       },
     },

@@ -1,10 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dancing+Script:wght@500&family=Italianno&family=Montserrat:wght@500&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dancing+Script:wght@500&family=Great+Vibes&family=Italianno&family=Montserrat:wght@500&family=Playfair+Display:ital@0;1&family=Poppins&display=swap");
+
+/* main title: font-family: 'Great Vibes', cursive; */
+/* sub title: font-family: 'Playfair Display', serif; */
+.footer-txt {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.main {
+  background-image: linear-gradient(
+    to right top,
+    #fdebdf,
+    #feeee4,
+    #fff0e9,
+    #fff3ee,
+    #fff6f3,
+    #fff8f6,
+    #fff9f9,
+    #fefbfb,
+    #fefcfd,
+    #fefdfe,
+    #fefeff,
+    #ffffff
+  );
+}
 
 .section-1-main {
   background-image: url(assets/mock/wed-bg.jpg);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
+}
+
+.sec-1-sub-details {
+  text-shadow: 1px 1px 0px #ffffff;
 }
 
 .head-text {
@@ -21,7 +50,7 @@
 
 .timeline-con:hover .timeline-circle {
   /* mikado yellow */
-  background-color: #ffc301;
+  background-color: #e1726e;
   transition: 0.25s;
 }
 
@@ -48,7 +77,7 @@ td {
 }
 
 .guest-table tr:nth-child(even) {
-  background-color: #ffefbb;
+  background-color: #fff0ed;
 }
 
 .icon-class {
@@ -96,6 +125,7 @@ td {
     background-image: url(assets/mock/wed-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 8px;
   }
   .sec-1-bg-img {
     display: none;
@@ -123,6 +153,9 @@ td {
   .edit-link-btn-div {
     justify-content: space-around;
   }
+  .sec-2-sub {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -148,11 +181,10 @@ td {
   .sec-5-form {
     padding: 0;
   }
-  .wed-text {
-    line-height: 20px;
-  }
+
   .wed-1 {
-    font-size: 50px;
+    font-size: 55px;
+    line-height: 50px;
   }
   .wed-2 {
     font-size: 40px;
