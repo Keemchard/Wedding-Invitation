@@ -1,5 +1,6 @@
 import React from "react";
 import { Guest } from "../../../types/types";
+import convertTo12Hour from "../../../utils/convertTimeTo12Hour";
 
 interface Prop {
   guest: Guest[];
@@ -25,7 +26,7 @@ const GuestTable = ({ guest }: Prop) => {
                   <td>{guest.first_name}</td>
                   <td>{guest.last_name}</td>
                   <td>{guest.date}</td>
-                  <td>{guest.time}</td>
+                  <td>{guest.time && convertTo12Hour(guest.time)}</td>
                 </tr>
               );
             })}
