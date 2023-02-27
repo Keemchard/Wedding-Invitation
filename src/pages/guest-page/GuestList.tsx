@@ -18,12 +18,33 @@ const GuestList = () => {
 
   const user = auth.currentUser;
 
+  // const getGuestList = async () => {
+  //   try {
+  //     setLoading(true);
+  //     const querySnapshot = await getDocs(collection(db, "guest"));
+  //     const guestData = querySnapshot.docs.map((item) => {
+  //       return item.data();
+  //     });
+  //     getGuest(guestData);
+  //     setLoading(false);
+  //   } catch (e) {
+  //     setLoading(false);
+  //     setError(`Error: ${e}`);
+  //   }
+  // };
+
   const getGuestList = async () => {
     try {
       setLoading(true);
       const querySnapshot = await getDocs(collection(db, "guest"));
       const guestData = querySnapshot.docs.map((item) => {
         return item.data();
+      });
+      guestData.sort((a, b) => {
+        // assuming date and time are stored as strings in the format "YYYY-MM-DD HH:mm"
+        const dateTimeA = new Date(`${a.date} ${a.time}`).getTime();
+        const dateTimeB = new Date(`${b.date} ${b.time}`).getTime();
+        return dateTimeB - dateTimeA; // sort in descending order
       });
       getGuest(guestData);
       setLoading(false);
