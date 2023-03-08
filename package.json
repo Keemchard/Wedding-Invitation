@@ -26,7 +26,8 @@
     "react-vertical-timeline-component": "^3.6.0",
     "sort-by": "^1.2.0",
     "typescript": "^4.9.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",

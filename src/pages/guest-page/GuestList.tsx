@@ -8,6 +8,7 @@ import { toast_notif } from "../../utils/toast";
 import Loading from "react-loading";
 import Header from "./components/Header";
 import GuestTable from "./components/GuestTable";
+import * as XLSX from "xlsx";
 
 const GuestList = () => {
   const [guest, getGuest] = useState<Guest[]>([{}]);
@@ -52,6 +53,22 @@ const GuestList = () => {
       setLoading(false);
       setError(`Error: ${e}`);
     }
+  };
+
+  const exportGuestDataToExcel = (guestData: Guest[]) => {
+    const worksheet = XLSX.utils.json_to_sheet(guestData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Guest Data");
+    const buffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
+    const blob = new Blob([buffer], { type: "application/octet-stream" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    document.body.appendChild(a);
+    a.href = url;
+    a.download = "guest-data.xlsx";
+    a.click();
+    URL.revokeObjectURL(url);
+    document.body.removeChild(a);
   };
 
   const sign_out = async () => {
@@ -111,6 +128,19 @@ const GuestList = () => {
           <div className="relative">
             <div className="fixed w-full top-0">
               <Header guestLength={guest.length} signOut={sign_out} />
+              <div className="fixed top-2 right-2">
+                {/* <Button
+                  label="📥 Excel"
+                  width=""
+                  btnFunction={() => exportGuestDataToExcel(guest)}
+                /> */}
+                <button
+                  className="fixed top-3 right-2 bg-wd_mikado_yellow p-3 text-white font-bold rounded"
+                  onClick={() => exportGuestDataToExcel(guest)}
+                >
+                  📥 Excel
+                </button>
+              </div>
             </div>
             <div className="guest-main-table mt-28">
               <GuestTable guest={guest} />

@@ -25,6 +25,12 @@
   );
 }
 
+.signout-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 .section-1-main {
   background-image: url(assets/mock/wed-bg.jpg);
   background-size: cover;
